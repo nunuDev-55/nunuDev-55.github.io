@@ -287,6 +287,18 @@ h1,h2,h3,p,ul,ol{margin:0}
 .tl h3{font-family:var(--display);font-weight:700;font-stretch:112%;font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:-.02em;line-height:1.15;margin-top:4px}
 .tl p{color:var(--muted);margin-top:8px;max-width:58ch}
 
+/* work photo next to the timeline */
+.path-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(36px,5vw,56px);align-items:start}
+@media(min-width:1000px){.path-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
+.work-ph{position:relative;margin:0;width:min(100%,380px);aspect-ratio:3/4;justify-self:center;border-radius:24px;overflow:hidden;isolation:isolate;border:1px solid var(--line);
+  background:radial-gradient(70% 55% at 50% 30%,color-mix(in srgb,var(--acc) 45%,transparent),transparent 72%),linear-gradient(180deg,var(--deep),var(--bg2));box-shadow:0 40px 80px -40px color-mix(in srgb,var(--acc) 40%,transparent)}
+@media(min-width:1000px){.work-ph{position:sticky;top:110px;justify-self:end}}
+@media(max-width:999px){.work-ph{width:min(78%,320px)}}
+.work-ph::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 40px),repeating-linear-gradient(0deg,var(--line) 0 1px,transparent 1px 40px);-webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent 75%);mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent 75%)}
+.work-ph img{position:absolute;left:50%;bottom:0;height:94%;width:auto;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 24px 30px rgba(0,0,0,.35))}
+.work-ph figcaption{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);font-size:.82rem;line-height:1.3}
+.work-ph .lg{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center;background:var(--acc);color:#fff;font-family:var(--display);font-weight:800;font-stretch:115%;font-size:.72rem}
+
 /* contact */
 .contact{padding-block:clamp(80px,12vw,160px) 40px;overflow:hidden}
 .big-cta{display:block;font-size:clamp(3.2rem,15vw,15rem)}
@@ -512,12 +524,18 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
 <section class="path" id="percurso">
   <div class="wrap">
     <div class="sh"><h2 class="disp kin" data-th="pathT">Percur<span class="o">so</span></h2><span class="mono" data-t="pathS">Experiência e formação</span></div>
+    <div class="path-grid">
     <ol class="tl" id="tl">
       <span class="line" aria-hidden="true"><i id="tlline"></i></span>
       <li><span class="when" data-t="tl1w">ATUAL</span><h3 data-t="tl1h">Programador full-stack, independente</h3><p data-t="tl1p">Sistemas e aplicações à medida para empresas e escolas, do levantamento de requisitos à publicação.</p></li>
       <li><span class="when">2026</span><h3 data-t="tl2h">nsERP e EduFuturo Digital</h3><p data-t="tl2p">Concebi e desenvolvi os dois sistemas de ponta a ponta com Laravel 12, React 19 e TypeScript. O nsERP é o meu projeto de monografia, testado na LemServ.</p></li>
       <li><span class="when" data-t="tl3w">EM CURSO · 4.º ANO</span><h3 data-t="tl3h">Licenciatura em Informática de Economia e Gestão</h3><p data-t="tl3p">Programação, bases de dados e sistemas de informação, a par de economia, contabilidade e gestão.</p></li>
     </ol>
+    <figure class="work-ph">
+      <img src="media/me-work.webp" width="404" height="1100" loading="lazy" alt="Nuryan Sultane com o polo e o crachá da LemServ">
+      <figcaption><span class="lg" aria-hidden="true">LS</span><span data-t="wkC">Na LemServ, empresa-piloto do nsERP</span></figcaption>
+    </figure>
+    </div>
   </div>
 </section>
 
@@ -585,7 +603,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
   new MutationObserver(runTheme).observe(root,{attributes:true,attributeFilter:['data-theme']});
   let lenis=null,gsapReady=false;
   const I={pt:{
-    stCap:'Programador full-stack · Moçambique',k1s:'Gestão empresarial · Laravel + React',k2s:'PWA em 4 línguas',k3t:'4.º ano',k3s:'Informática de Economia e Gestão',
+    wkC:'Na LemServ, empresa-piloto do nsERP',stCap:'Programador full-stack · Moçambique',k1s:'Gestão empresarial · Laravel + React',k2s:'PWA em 4 línguas',k3t:'4.º ano',k3s:'Informática de Economia e Gestão',
     nsD:'Sistema de gestão para escolas e faculdades, da mesma família do nsERP. Está em desenvolvimento e vai aparecer aqui com capturas assim que a primeira versão estiver pronta.',nsM0:'Em desenvolvimento',nsM1:'Gestão escolar',nsL:'Acompanhar no GitHub',nsBadge:'Em construção',
     ld:'Portfólio · 2026',n1:'Projetos',n3:'Percurso',n4:'Contacto',h1:'Programador full-stack em Moçambique. Construo',h2:'para empresas e escolas.',avail:'Disponível',mz:'Moçambique',
     b1:'Ver projetos',b2:'Currículo',scroll:'Role',about:'(Sobre)',projT:'Proje<span class="o">tos</span>',drag:'Arraste a esfera',g1:'Linguagens',g2:'Frameworks e bibliotecas',g3:'Dados, ferramentas e integrações',
@@ -601,7 +619,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
     tyP:{ty1:'um sistema de gestão',ty2:'um site ou loja online',ty3:'uma aplicação web',ty4:'uma vaga de emprego para si',ty5:'um projeto'},
     msg:(n,t,m)=>`Olá Nuryan!${n?` Sou ${n}.`:''} Gostava de falar sobre ${t}.${m?`\n\n${m}`:''}`
   },en:{
-    stCap:'Full-stack developer · Mozambique',k1s:'Business management · Laravel + React',k2s:'PWA in 4 languages',k3t:'4th year',k3s:'CS for Economics and Management',
+    wkC:'At LemServ, the nsERP pilot company',stCap:'Full-stack developer · Mozambique',k1s:'Business management · Laravel + React',k2s:'PWA in 4 languages',k3t:'4th year',k3s:'CS for Economics and Management',
     nsD:'A management system for schools and universities, from the same family as nsERP. It is in development and will show up here with screenshots as soon as the first version is ready.',nsM0:'In development',nsM1:'School management',nsL:'Follow on GitHub',nsBadge:'Under construction',
     ld:'Portfolio · 2026',n1:'Projects',n3:'Journey',n4:'Contact',h1:'Full-stack developer in Mozambique. I build',h2:'for companies and schools.',avail:'Available',mz:'Mozambique',
     b1:'See projects',b2:'Résumé',scroll:'Scroll',about:'(About)',projT:'Pro<span class="o">jects</span>',drag:'Drag the sphere',g1:'Languages',g2:'Frameworks and libraries',g3:'Data, tools and integrations',
@@ -913,6 +931,7 @@ void main(){
   gsap.to('#name .row2 .ln',{xPercent:8,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
   gsap.to('#studio',{yPercent:-12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
   gsap.from('.ab-ph',{y:60,rotate:-4,opacity:0,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'.ab-ph',start:'top 88%'}});
+  gsap.from('.work-ph',{y:70,rotate:3,opacity:0,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'.work-ph',start:'top 88%'}});
   gsap.from('.soon',{y:60,opacity:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:'.soon',start:'top 88%'}});
   gsap.fromTo('#galaxy',{scale:.6,rotate:-30},{scale:1,rotate:0,ease:'none',scrollTrigger:{trigger:'#contacto',start:'top bottom',end:'top 20%',scrub:true}});
   gsap.to('#hero .wrap',{opacity:.2,y:-60,ease:'none',scrollTrigger:{trigger:'#hero',start:'center top',end:'bottom top',scrub:true}});
