@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Nuryan Sultane, programador full-stack em Moçambique. Sistemas de gestão e aplicações web com React, TypeScript, Laravel e Node.js.">
 <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f3f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f1f2f6" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nuryan Sultane · Programador Full-stack">
 <meta property="og:description" content="Sistemas de gestão e aplicações web com React, TypeScript, Laravel e Node.js. Projetos: nsERP e EduFuturo Digital.">
@@ -20,7 +20,7 @@
 /* Layout: motion-led dark portfolio — loader, shader hero with a living name, logo rails, scroll-lit statement, two sticky product tours, 3D stack sphere, drawn timeline, giant contact. Single dark look by choice. */
 :root{
   --bg:#08090b; --bg2:#0f1013; --fg:#f1f1ee; --muted:#8f929b; --faint:#5b5e66; --line:rgba(255,255,255,.1);
-  --acc:#4f6bff; --acc2:#a9b6ff; --deep:#151a45; --card:#121318; --stroke:rgba(255,255,255,.35); --ring:rgba(255,255,255,.4); --glass:rgba(8,9,11,.55); --shade:rgba(8,9,11,.35); --gs:58%; --ghost:.17; --nglow:rgba(8,9,11,.9); --hbg:#050608;
+  --acc:#4f6bff; --acc2:#a9b6ff; --deep:#151a45; --card:#121318; --stroke:rgba(255,255,255,.35); --ring:rgba(255,255,255,.4); --glass:rgba(8,9,11,.55); --shade:rgba(8,9,11,.35); --gs:58%; --ghost:.17; --nglow:rgba(8,9,11,.9); --hbg:#08090b;
   --display:"Archivo","Arial Black",Impact,sans-serif;
   --font:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -29,12 +29,12 @@
   color-scheme:dark;
 }
 @media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
-  --bg:#f3f3ef; --bg2:#e9e9e4; --fg:#0e0f12; --muted:#5b5e67; --faint:#989ba3; --line:rgba(14,15,18,.12);
-  --acc:#3a52f0; --acc2:#2f45d6; --deep:#c9d0fb; --card:#ffffff; --stroke:rgba(14,15,18,.4); --ring:rgba(14,15,18,.35); --glass:rgba(243,243,239,.7); --shade:rgba(243,243,239,.45); --gs:16%; --ghost:.13; --nglow:rgba(244,245,248,.95); --hbg:#eef0f5; color-scheme:light;
+  --bg:#f1f2f6; --bg2:#e6e8ef; --fg:#0e0f12; --muted:#5b5e67; --faint:#989ba3; --line:rgba(14,15,18,.12);
+  --acc:#3a52f0; --acc2:#2f45d6; --deep:#c9d0fb; --card:#ffffff; --stroke:rgba(14,15,18,.4); --ring:rgba(14,15,18,.35); --glass:rgba(241,242,246,.7); --shade:rgba(241,242,246,.45); --gs:16%; --ghost:.13; --nglow:rgba(241,242,246,.95); --hbg:#f1f2f6; color-scheme:light;
 }}
 :root[data-theme="light"]{
-  --bg:#f3f3ef; --bg2:#e9e9e4; --fg:#0e0f12; --muted:#5b5e67; --faint:#989ba3; --line:rgba(14,15,18,.12);
-  --acc:#3a52f0; --acc2:#2f45d6; --deep:#c9d0fb; --card:#ffffff; --stroke:rgba(14,15,18,.4); --ring:rgba(14,15,18,.35); --glass:rgba(243,243,239,.7); --shade:rgba(243,243,239,.45); --gs:16%; --ghost:.13; --nglow:rgba(244,245,248,.95); --hbg:#eef0f5; color-scheme:light;
+  --bg:#f1f2f6; --bg2:#e6e8ef; --fg:#0e0f12; --muted:#5b5e67; --faint:#989ba3; --line:rgba(14,15,18,.12);
+  --acc:#3a52f0; --acc2:#2f45d6; --deep:#c9d0fb; --card:#ffffff; --stroke:rgba(14,15,18,.4); --ring:rgba(14,15,18,.35); --glass:rgba(241,242,246,.7); --shade:rgba(241,242,246,.45); --gs:16%; --ghost:.13; --nglow:rgba(241,242,246,.95); --hbg:#f1f2f6; color-scheme:light;
 }
 body{transition:background-color .5s,color .5s}
 *,*::before,*::after{box-sizing:border-box}
@@ -107,6 +107,7 @@ h1,h2,h3,p,ul,ol{margin:0}
 .h-photo{position:absolute;z-index:0;bottom:0;right:max(-2vw,calc((100vw - 1440px)/2));height:min(94%,940px);aspect-ratio:1745/2281;pointer-events:none;will-change:transform}
 .h-photo::before{content:"";position:absolute;inset:8% 0 0 8%;z-index:-1;border-radius:50% 50% 0 0;background:radial-gradient(60% 50% at 50% 35%,color-mix(in srgb,var(--acc) var(--gs),transparent),transparent 70%);filter:blur(10px)}
 .h-photo img{display:block;height:100%;width:auto;max-width:none;-webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 99%);mask-image:linear-gradient(180deg,#000 78%,transparent 99%);}
+.hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;z-index:-1;pointer-events:none;background:linear-gradient(transparent,var(--bg))}
 .hero .wrap{position:relative;z-index:2;width:100%;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(110px,16vh,150px) 28px}
 .h-copy{display:flex;flex-direction:column;gap:clamp(22px,3.4vh,36px);max-width:min(100%,900px)}
 .say{max-width:30ch;font-size:clamp(1.05rem,1.7vw,1.45rem);line-height:1.42;letter-spacing:-.01em;margin:0}
@@ -442,10 +443,6 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
       <span class="mono" data-t="about">(Sobre)</span>
       <p class="big" id="words"></p>
       <p class="ab-sub" data-t="abSub">Feitos da base de dados à interface, com atenção a quem os usa.</p>
-      <div class="btns">
-        <a class="btn acc mag" href="#projetos"><span data-t="b1">Ver projetos</span> <svg viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
-        <a class="btn mag" href="Nuryan-Sultane-CV.pdf" target="_blank" rel="noopener" download><span data-t="b2">Currículo</span> <svg viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
-      </div>
     </div>
   </div>
 </section>
@@ -669,7 +666,7 @@ void main(){
       gl.useProgram(pr);const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
       const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
       const U=k=>gl.getUniformLocation(pr,k);const uR=U('r'),uT=U('t'),uM=U('m');
-      const c0L=U('c0'),c1L=U('c1'),c2L=U('c2');const pal=l=>{gl.useProgram(pr);gl.uniform3fv(c0L,rgb(l?'#f3f3ef':'#08090b'));gl.uniform3fv(c1L,rgb(l?'#3a52f0':'#4f6bff'));gl.uniform3fv(c2L,rgb(l?'#c9d0fb':'#151a45'));};pal(isLight());themeHooks.push(pal);
+      const c0L=U('c0'),c1L=U('c1'),c2L=U('c2');const pal=l=>{gl.useProgram(pr);gl.uniform3fv(c0L,rgb(l?'#f1f2f6':'#08090b'));gl.uniform3fv(c1L,rgb(l?'#3a52f0':'#4f6bff'));gl.uniform3fv(c2L,rgb(l?'#c9d0fb':'#151a45'));};pal(isLight());themeHooks.push(pal);
       const size=()=>{const d=Math.min(devicePixelRatio||1,1.5);cv.width=Math.round(cv.clientWidth*d);cv.height=Math.round(cv.clientHeight*d);gl.viewport(0,0,cv.width,cv.height);};
       size();addEventListener('resize',size);
       let m=[.7,.6],mt=[.7,.6];const hero=document.getElementById('hero');
@@ -721,7 +718,7 @@ void main(){
       scene.add(new THREE.AmbientLight(0x2a3170,1.1));const dl=new THREE.DirectionalLight(0xa9b6ff,1.1);dl.position.set(-4,8,6);scene.add(dl);
       const pl=new THREE.PointLight(0x4f6bff,2.2,14);pl.position.set(0,3,2);scene.add(pl);
       const M=new THREE.Matrix4(),col=new THREE.Color(),c1=new THREE.Color('#1a1e3a'),c2=new THREE.Color('#4f6bff'),c3=new THREE.Color('#dfe4ff');
-      const fp=l=>{scene.fog.color.set(l?'#f3f3ef':'#08090b');c1.set(l?'#dde0ec':'#1a1e3a');c2.set(l?'#5d73ff':'#4f6bff');c3.set(l?'#1d2a8f':'#dfe4ff');};fp(isLight());themeHooks.push(fp);
+      const fp=l=>{scene.fog.color.set(l?'#f1f2f6':'#08090b');c1.set(l?'#dde0ec':'#1a1e3a');c2.set(l?'#5d73ff':'#4f6bff');c3.set(l?'#1d2a8f':'#dfe4ff');};fp(isLight());themeHooks.push(fp);
       const pos=[];for(let i=0;i<NX;i++)for(let k=0;k<NZ;k++)pos.push([(i-NX/2+.5)*S,(k-NZ/2+.5)*S]);
       fit(R,cam,cv);addEventListener('resize',()=>fit(R,cam,cv));
       let tx=0,tz=0,sc=0;
