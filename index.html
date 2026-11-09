@@ -104,7 +104,7 @@ h1,h2,h3,p,ul,ol{margin:0}
 .h-arcs path{fill:none;stroke:var(--acc);stroke-width:1.3;vector-effect:non-scaling-stroke;opacity:.55;stroke-dasharray:1;stroke-dashoffset:0;animation:arc 2.6s var(--ease) both}
 .h-arcs path.a2{animation-delay:.25s;opacity:.4}.h-arcs path.a3{animation-delay:.5s;opacity:.3}
 @keyframes arc{from{stroke-dashoffset:1}}
-.h-photo{position:absolute;z-index:0;bottom:0;right:max(-2vw,calc((100vw - 1440px)/2));height:min(94%,940px);aspect-ratio:1052/1375;pointer-events:none;will-change:transform}
+.h-photo{position:absolute;z-index:0;bottom:0;right:max(-2vw,calc((100vw - 1440px)/2));height:min(94%,940px);aspect-ratio:1745/2281;pointer-events:none;will-change:transform}
 .h-photo::before{content:"";position:absolute;inset:8% 0 0 8%;z-index:-1;border-radius:50% 50% 0 0;background:radial-gradient(60% 50% at 50% 35%,color-mix(in srgb,var(--acc) var(--gs),transparent),transparent 70%);filter:blur(10px)}
 .h-photo img{display:block;height:100%;width:auto;max-width:none;-webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 99%);mask-image:linear-gradient(180deg,#000 78%,transparent 99%);}
 .hero .wrap{position:relative;z-index:2;width:100%;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(110px,16vh,150px) 28px}
@@ -384,13 +384,13 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
 <main id="inicio">
 <section class="hero" id="hero">
   <div class="h-bg" aria-hidden="true"><span class="o1"></span><span class="o2"></span><span class="c1"></span><span class="c2"></span></div>
-  <img class="h-ghost" src="media/me-suit.webp" width="1052" height="1375" alt="" aria-hidden="true">
+  <img class="h-ghost" src="media/me-suit-m.webp" width="842" height="1100" alt="" aria-hidden="true">
   <svg class="h-arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <path class="a1" pathLength="1" d="M620 470 C 820 300, 1080 210, 1520 170"/>
     <path class="a2" pathLength="1" d="M1000 430 C 1150 320, 1300 260, 1520 230"/>
     <path class="a3" pathLength="1" d="M360 960 C 760 760, 1120 700, 1520 660"/>
   </svg>
-  <div class="h-photo" id="hphoto"><img src="media/me-suit.webp" width="1052" height="1375" alt="Nuryan Sultane de fato preto"></div>
+  <div class="h-photo" id="hphoto"><img src="media/me-suit.webp" srcset="media/me-suit-m.webp 842w, media/me-suit.webp 1745w" sizes="(max-width: 640px) 70vw, 48vw" width="1745" height="2281" decoding="async" fetchpriority="high" alt="Nuryan Sultane de fato preto"></div>
   <div class="wrap">
     <div class="h-copy">
       <p class="say h-in"><span data-t="h1">Programador full-stack em Moçambique. Construo</span> <span class="scr" id="scr">sistemas de gestão</span><br><span data-t="h2">para empresas e escolas.</span></p>
