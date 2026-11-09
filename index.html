@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Nuryan Sultane, programador full-stack em Moçambique. Sistemas de gestão e aplicações web com React, TypeScript, Laravel e Node.js.">
+<meta name="description" content="Nuryan Sultane, programador full-stack em Moçambique. Sistemas de gestão e aplicações web com Laravel, React, TypeScript e Node.js.">
 <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f3f3ef" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://nunudev-55.github.io/">
 <meta property="og:title" content="Nuryan Sultane · Programador Full-stack">
-<meta property="og:description" content="Sistemas de gestão e aplicações web com React, TypeScript, Laravel e Node.js. Projetos: nsERP e EduFuturo Digital.">
-<meta property="og:image" content="media/nserp-clean.jpg">
+<meta property="og:description" content="Sistemas de gestão e aplicações web com Laravel, React e TypeScript. Projetos: nsERP, EduFuturo Digital e NSEdu.">
+<meta property="og:image" content="https://nunudev-55.github.io/media/nserp-clean.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090b'/%3E%3Ctext x='32' y='42' font-family='Arial Black,Arial' font-weight='900' font-size='26' text-anchor='middle' fill='%23ffffff'%3ENS%3C/text%3E%3Ccircle cx='51' cy='51' r='5' fill='%234f6bff'/%3E%3C/svg%3E">
 <title>Nuryan Sultane</title>
@@ -94,7 +95,39 @@ h1,h2,h3,p,ul,ol{margin:0}
 .hero{position:relative;min-height:min(100svh,980px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate}
 #gl{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
 .hero .fallback{position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 50% at 70% 30%,color-mix(in srgb,var(--acc) 35%,transparent),transparent 70%),radial-gradient(50% 50% at 20% 70%,var(--deep),transparent 70%)}
-.hero .wrap{width:100%;padding-block:120px 32px}
+.hero .wrap{width:100%;padding-block:clamp(96px,14vh,130px) 32px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(32px,5vw,48px);align-items:center}
+@media(min-width:1000px){.hero-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
+.h-copy{min-width:0}
+.h-stack{margin-top:clamp(14px,2vw,20px);letter-spacing:.1em}
+/* studio portrait */
+.studio-wrap{position:relative;margin:0;width:100%;max-width:520px;justify-self:center;perspective:1400px}
+@media(min-width:1000px){.studio-wrap{justify-self:end}}
+.studio{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;isolation:isolate;transform-style:preserve-3d;will-change:transform;border:1px solid var(--line);
+  background:radial-gradient(75% 55% at 50% 28%,color-mix(in srgb,var(--acc) 62%,transparent),transparent 72%),linear-gradient(180deg,var(--deep) 0%,var(--bg2) 100%);
+  box-shadow:0 50px 100px -40px color-mix(in srgb,var(--acc) 45%,transparent),0 30px 60px -30px rgba(0,0,0,.45)}
+.st-grid{position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 44px),repeating-linear-gradient(0deg,var(--line) 0 1px,transparent 1px 44px);-webkit-mask-image:radial-gradient(70% 60% at 50% 35%,#000,transparent 75%);mask-image:radial-gradient(70% 60% at 50% 35%,#000,transparent 75%);opacity:.7}
+.st-beam{position:absolute;inset:-30%;z-index:-1;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.18) 50%,transparent 58%);animation:beam 7s var(--ease) infinite}
+@keyframes beam{0%{transform:translateX(-45%)}60%,100%{transform:translateX(45%)}}
+.st-floor{position:absolute;left:10%;right:10%;bottom:-6%;height:22%;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent)}
+.st-me{position:absolute;left:50%;bottom:0;width:94%;max-width:none;height:auto;transform:translateX(-50%);filter:drop-shadow(0 24px 36px rgba(0,0,0,.35)) drop-shadow(0 0 1px rgba(255,255,255,.4))}
+.st-cap{position:absolute;left:14px;right:14px;bottom:14px;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);font-size:.84rem}
+.st-cap span{color:var(--muted);font-size:.78rem;text-align:right}
+.st-card{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;padding:10px 14px 10px 10px;border-radius:14px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:0 18px 40px -20px rgba(0,0,0,.45);font-size:.84rem;line-height:1.25;will-change:transform;animation:bob 6s ease-in-out infinite}
+.st-card b{display:block;font-weight:600}
+.st-card small{color:var(--muted);font-size:.74rem}
+.st-card .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none;background:var(--acc);color:#fff;font-family:var(--display);font-weight:800;font-stretch:115%;font-size:.8rem;letter-spacing:-.02em}
+.st-card .ic.b{background:#1d4ed8}
+.st-card .ic.g{background:transparent;border:1px solid var(--line)}
+.st-card .ic.g i{width:9px;height:9px;border-radius:50%;background:#4cd27a;box-shadow:0 0 0 4px rgba(76,210,122,.2)}
+.st-card.k1{top:9%;left:-6%}
+.st-card.k2{top:42%;right:-7%;animation-delay:-2s}
+.st-card.k3{bottom:16%;left:-8%;animation-delay:-4s}
+@keyframes bob{50%{translate:0 -8px}}
+@media(max-width:600px){.st-card.k1{left:8px;top:8px}.st-card.k2{right:8px}.st-card.k3{left:8px;bottom:78px}.st-card{padding:8px 10px 8px 8px}.st-card .ic{width:28px;height:28px}}
+@media(max-width:999px){.studio-wrap{max-width:440px}}
+@media(max-width:600px){.scroll{display:none}}
+@media(min-width:1000px) and (max-width:1199px){.st-cap span{display:none}}
 .h-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:clamp(20px,4vw,40px)}
 .h-top .say{max-width:36ch;font-size:clamp(1.05rem,1.7vw,1.35rem);line-height:1.45}
 .scr{color:var(--acc2);font-family:var(--mono);font-size:.92em;white-space:nowrap}
@@ -102,7 +135,8 @@ h1,h2,h3,p,ul,ol{margin:0}
 .pill i{position:relative;width:7px;height:7px;border-radius:50%;background:#4cd27a}
 .pill i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#4cd27a;animation:ping 2s var(--ease) infinite}
 @keyframes ping{to{transform:scale(3);opacity:0}}
-.name{font-size:clamp(3rem,11.4vw,10.8rem);margin:0}
+.name{font-size:clamp(2.6rem,13vw,6.4rem);margin:0}
+@media(min-width:1000px){.name{font-size:min(8vw,6.9rem)}}
 .name .ch{font-variation-settings:"wdth" 125,"wght" 800}
 .name .row2{display:flex;justify-content:space-between;align-items:flex-end;gap:.2em}
 .name .ln{white-space:nowrap;flex:none}
@@ -125,8 +159,6 @@ h1,h2,h3,p,ul,ol{margin:0}
 
 /* 3D scenes */
 .c3d{position:absolute;pointer-events:none;display:block}
-#blob{z-index:-1;width:min(50vw,720px);aspect-ratio:1;right:-2vw;top:44%;transform:translateY(-55%)}
-@media(max-width:760px){#blob{width:125vw;right:-38vw;top:24%;opacity:.95}}
 .state{position:relative;isolation:isolate;overflow:hidden}
 #field{z-index:-1;inset:0;width:100%;height:100%;opacity:.9}
 .state::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--bg) 0%,var(--shade) 30%,var(--shade) 70%,var(--bg) 100%);pointer-events:none}
@@ -146,8 +178,13 @@ h1,h2,h3,p,ul,ol{margin:0}
 
 /* statement */
 .state{padding-block:clamp(100px,16vw,200px)}
-.state .g{display:grid;grid-template-columns:1fr;gap:24px}
-@media(min-width:900px){.state .g{grid-template-columns:3fr 9fr;gap:40px}}
+.state .g{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
+@media(min-width:900px){.state .g{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px}}
+.ab-side{display:flex;flex-direction:column;gap:18px}
+.ab-ph{position:relative;margin:0;width:min(100%,320px);aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(70% 55% at 50% 30%,color-mix(in srgb,var(--acc) 40%,transparent),transparent 72%),linear-gradient(180deg,var(--bg2),var(--deep))}
+.ab-ph img{position:absolute;left:50%;bottom:0;width:96%;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 20px 30px rgba(0,0,0,.3))}
+.ab-ph figcaption{position:absolute;left:10px;bottom:10px;padding:6px 10px;border-radius:999px;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--fg)}
+@media(max-width:899px){.ab-ph{width:min(62%,260px)}}
 .state p.big{font-size:clamp(1.65rem,4vw,3.6rem);line-height:1.14;letter-spacing:-.025em;font-weight:500;text-wrap:balance}
 .state p.big em{font-style:normal;color:var(--acc2)}
 .w{display:inline-block}
@@ -160,19 +197,19 @@ h1,h2,h3,p,ul,ol{margin:0}
 /* tours */
 .work{padding-block:clamp(80px,10vw,140px) 0}
 .tour{padding-bottom:clamp(80px,10vw,140px)}
-.t-head{display:grid;grid-template-columns:1fr;gap:20px;align-items:end;margin-bottom:28px}
-@media(min-width:1000px){.t-head{grid-template-columns:7fr 5fr;gap:40px}}
+.t-head{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:end;margin-bottom:28px}
+@media(min-width:1000px){.t-head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px}}
 .t-title{display:flex;align-items:flex-end;gap:16px}
 .t-title .num{font-family:var(--mono);font-size:.8rem;color:var(--acc2);padding-bottom:.6em}
-.t-title h3{font-size:clamp(2.8rem,8vw,7rem)}
+.t-title h3{font-size:clamp(2rem,9.4vw,6rem)}
 .t-head p{color:var(--muted);max-width:52ch}
 .t-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .t-meta span{font-family:var(--mono);font-size:.72rem;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
-.t-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
-@media(min-width:1000px){.t-grid{grid-template-columns:5fr 7fr;gap:56px}}
+.t-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+@media(min-width:1000px){.t-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}}
 .steps{list-style:none;padding:0;order:2;display:flex;flex-direction:column}
 @media(min-width:1000px){.steps{order:0;padding-block:8vh 32vh}}
-.step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:12px;padding:20px 0 20px 0;border-top:1px solid var(--line);opacity:.35;transition:opacity .5s var(--ease);cursor:pointer}
+.step{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:20px 0 20px 0;border-top:1px solid var(--line);opacity:.35;transition:opacity .5s var(--ease);cursor:pointer}
 @media(min-width:1000px){.step{min-height:34vh;align-content:center;border-top:0}}
 .step.on{opacity:1}
 .step .n{font-family:var(--mono);font-size:.8rem;color:var(--muted);padding-top:6px}
@@ -198,10 +235,32 @@ h1,h2,h3,p,ul,ol{margin:0}
 .vbtn:hover{background:#3a55f0}
 .vbtn svg{width:12px;height:12px;fill:currentColor}
 
+/* coming soon project */
+.soon{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center;padding:clamp(22px,3vw,36px);border:1px solid var(--line);border-radius:24px;background:color-mix(in srgb,var(--bg2) 70%,transparent);margin-bottom:clamp(80px,10vw,140px)}
+@media(min-width:1000px){.soon{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px}}
+.soon-copy{display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0}
+.soon-copy p{color:var(--muted);max-width:50ch}
+.t-meta .dot{display:inline-flex;align-items:center;gap:6px;color:var(--fg)}
+.t-meta .dot::before{content:"";width:7px;height:7px;border-radius:50%;background:#f5b041;box-shadow:0 0 0 3px rgba(245,176,65,.2)}
+.soon-vis{position:relative;border-radius:14px;overflow:hidden;background:#0d0e12;border:1px solid rgba(255,255,255,.08);min-width:0}
+.sk-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#141519}
+.sk-bar i{width:9px;height:9px;border-radius:50%;background:#2c2e34}
+.sk-bar span{margin-left:10px;font:500 .7rem var(--mono);color:#7d8089}
+.sk-body{display:grid;grid-template-columns:24% 1fr;gap:12px;padding:14px;aspect-ratio:16/8.5}
+.sk-side,.sk-main,.sk-row,.sk-list{display:flex;flex-direction:column;gap:9px;min-width:0}
+.sk-row{flex-direction:row}
+.sk-side b,.sk-row b,.sk-list b,.sk-chart{display:block;border-radius:6px;background:linear-gradient(90deg,#1b1d23 0%,#272a33 50%,#1b1d23 100%);background-size:200% 100%;animation:shimmer 1.8s linear infinite}
+.sk-side b{height:12px}.sk-side b:first-child{height:22px;width:70%;margin-bottom:6px}
+.sk-row b{flex:1;height:46px}
+.sk-chart{flex:1;min-height:60px}
+.sk-list b{height:12px}.sk-list b:nth-child(2){width:80%}.sk-list b:nth-child(3){width:60%}
+@keyframes shimmer{to{background-position:-200% 0}}
+.sk-badge{position:absolute;right:14px;bottom:14px;padding:6px 12px;border-radius:999px;background:#f5b041;color:#1a1305;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
+
 /* stack */
 .stack{padding-block:clamp(60px,8vw,120px)}
-.st-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
-@media(min-width:960px){.st-grid{grid-template-columns:6fr 6fr}}
+.st-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;align-items:center}
+@media(min-width:960px){.st-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .sphere{position:relative;width:min(100%,520px);aspect-ratio:1;justify-self:center;touch-action:pan-y;user-select:none;cursor:grab}
 .sphere:active{cursor:grabbing}
 .sphere::before{content:"";position:absolute;inset:16%;border-radius:50%;border:1px dashed var(--line);background:radial-gradient(circle at 35% 30%,rgba(79,107,255,.25),transparent 65%)}
@@ -263,14 +322,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
 @media(max-width:560px){.nav nav{display:none}}
 
 /* composer */
-.composer{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:1fr;gap:14px;padding:clamp(18px,2.6vw,28px);border:1px solid var(--line);border-radius:20px;background:color-mix(in srgb,var(--bg2) 78%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.composer{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:minmax(0,1fr);gap:14px;padding:clamp(18px,2.6vw,28px);border:1px solid var(--line);border-radius:20px;background:color-mix(in srgb,var(--bg2) 78%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .composer h3{font-family:var(--display);font-weight:700;font-stretch:112%;font-size:clamp(1.2rem,2vw,1.5rem);letter-spacing:-.02em}
 .types{display:flex;flex-wrap:wrap;gap:8px}
 .ty{height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);font-size:.88rem;color:var(--muted);transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
 .ty:hover{border-color:var(--acc);color:var(--fg)}
 .ty.on{background:var(--acc);border-color:var(--acc);color:#fff}
 .ty:active{transform:scale(.96)}
-.fields{display:grid;grid-template-columns:1fr;gap:10px}
+.fields{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
 @media(min-width:760px){.fields{grid-template-columns:1fr 2fr}}
 .field{position:relative}
 .field input,.field textarea{width:100%;font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:20px 14px 8px;resize:vertical;transition:border-color .25s,box-shadow .25s}
@@ -351,16 +410,17 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
 <section class="hero" id="hero">
   <div class="fallback" aria-hidden="true"></div>
   <canvas id="gl" aria-hidden="true"></canvas>
-  <canvas id="blob" class="c3d" aria-hidden="true"></canvas>
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div class="h-copy">
     <div class="h-top">
       <p class="say h-in"><span data-t="h1">Programador full-stack em Moçambique. Construo</span> <span class="scr" id="scr">sistemas de gestão</span><br><span data-t="h2">para empresas e escolas.</span></p>
       <span class="pill h-in"><i aria-hidden="true"></i><span data-t="avail">Disponível</span> · <span id="tnow">Moçambique</span></span>
     </div>
     <h1 class="name disp" id="name" aria-label="Nuryan Sultane">
       <span class="mask" aria-hidden="true"><span class="ln split">Nuryan</span></span>
-      <span class="mask row2" aria-hidden="true"><span class="ln split">Sultane</span><span class="tag">React · TypeScript<br>Laravel · Node.js</span></span>
+      <span class="mask row2" aria-hidden="true"><span class="ln split">Sultane</span></span>
     </h1>
+    <p class="h-stack mono h-in">Laravel · React · TypeScript · Node.js · MySQL</p>
     <div class="h-bot">
       <div class="btns h-in">
         <a class="btn acc mag" href="#projetos"><span data-t="b1">Ver projetos</span> <svg viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
@@ -368,6 +428,17 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
       </div>
       <span class="scroll mono h-in"><b></b><span data-t="scroll">Role</span></span>
     </div>
+   </div>
+   <figure class="studio-wrap" id="studio" aria-label="Retrato de Nuryan Sultane">
+    <div class="studio">
+      <span class="st-grid" aria-hidden="true"></span><span class="st-beam" aria-hidden="true"></span><span class="st-floor" aria-hidden="true"></span>
+      <img class="st-me" src="media/me-hero.webp" width="900" height="1052" alt="Nuryan Sultane de camisa, colete e gravata">
+      <figcaption class="st-cap"><b>Nuryan Sultane</b><span data-t="stCap">Programador full-stack · Moçambique</span></figcaption>
+    </div>
+    <div class="st-card k1" data-depth="26"><span class="ic">ns</span><div><b>nsERP</b><small data-t="k1s">Gestão empresarial · Laravel + React</small></div></div>
+    <div class="st-card k2" data-depth="40"><span class="ic b">Ed</span><div><b>EduFuturo</b><small data-t="k2s">PWA em 4 línguas</small></div></div>
+    <div class="st-card k3" data-depth="18"><span class="ic g"><i></i></span><div><b data-t="k3t">4.º ano</b><small data-t="k3s">Informática de Economia e Gestão</small></div></div>
+   </figure>
   </div>
 </section>
 
@@ -379,29 +450,48 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
 <section class="state">
   <canvas id="field" class="c3d" aria-hidden="true"></canvas>
   <div class="wrap g">
-    <span class="mono" data-t="about">(Sobre)</span>
+    <div class="ab-side">
+      <span class="mono" data-t="about">(Sobre)</span>
+      <figure class="ab-ph"><img src="media/me-about.webp" width="760" height="1187" loading="lazy" alt="Nuryan Sultane ao ar livre"><figcaption>Nuryan Sultane</figcaption></figure>
+    </div>
     <p class="big" id="words">Estudo <em>Informática de Economia e Gestão</em> e passo os dias a transformar processos de negócio em software. Vendas, facturas, stock, aulas online: sistemas que as pessoas usam todos os dias, feitos da base de dados à interface.</p>
   </div>
 </section>
 
 <section class="work" id="projetos">
   <div class="wrap">
-    <div class="sh"><h2 class="disp kin" data-th="projT">Proje<span class="o">tos</span></h2><span class="mono">(02) · 2026</span></div>
+    <div class="sh"><h2 class="disp kin" data-th="projT">Proje<span class="o">tos</span></h2><span class="mono">(03) · 2026</span></div>
     <article class="tour" id="caso-nserp">
-      <div class="t-head"><div class="t-title"><span class="num">01</span><h3 class="disp">nsERP</h3></div><div><p data-t="t01d">Sistema de gestão para pequenas e médias empresas. Junta num só lugar o que antes estava em folhas de cálculo e cadernos: vendas, reservas, facturação e stock.</p><div class="t-meta"><span data-t="t01m0">Full-stack</span><span data-t="t01m1">Desktop · Web · Telemóvel</span><span data-t="t01m2">M‑Pesa</span><span data-t="t01m3">2026</span></div></div></div>
+      <div class="t-head"><div class="t-title"><span class="num">01</span><h3 class="disp">nsERP</h3></div><div><p data-t="t01d">Sistema de gestão (ERP) para pequenas e médias empresas moçambicanas, feito como projeto de monografia e testado na LemServ. Junta vendas, reservas, facturação, compras e stock num só lugar, com o nome, o logótipo e as cores de cada empresa configuráveis.</p><div class="t-meta"><span data-t="t01m0">Laravel 12</span><span data-t="t01m1">React 19 + TypeScript</span><span data-t="t01m2">Inertia · shadcn/ui</span><span data-t="t01m3">MariaDB</span><span data-t="t01m4">M‑Pesa</span></div></div></div>
       <div class="t-grid">
         <ol class="steps"><li class="step on" data-img="media/nserp-clean.jpg"><span class="n">01</span><div><h4 data-t="t01s0h">Visão geral</h4><p data-t="t01s0p">O painel mostra num relance o que está por vender, entregar, facturar e receber.</p></div></li><li class="step" data-img="media/g/nserp-produtos.jpg"><span class="n">02</span><div><h4 data-t="t01s1h">Produtos e stock</h4><p data-t="t01s1p">Produtos com preços de venda e de aluguer, e as quantidades em armazém.</p></div></li><li class="step" data-img="media/g/nserp-reserva.jpg"><span class="n">03</span><div><h4 data-t="t01s2h">Reservas e orçamentos</h4><p data-t="t01s2p">O sistema calcula IVA, dias e totais à medida que as linhas são adicionadas.</p></div></li><li class="step" data-img="media/g/nserp-mpesa.jpg"><span class="n">04</span><div><h4 data-t="t01s3h">Pagamentos por M‑Pesa</h4><p data-t="t01s3p">Cada pagamento recebido fica ligado à factura, que fecha sozinha quando fica saldada.</p></div></li><li class="step" data-img="media/g/nserp-loja.jpg"><span class="n">05</span><div><h4 data-t="t01s4h">Loja online</h4><p data-t="t01s4p">Os clientes fazem pedidos pelo site da empresa, ligado ao inventário em tempo real.</p></div></li></ol>
         <div class="stage"><div class="dev"><div class="bar"><i></i><i></i><i></i><span>nsERP</span><span class="segs"><b></b><b></b><b></b><b></b><b></b></span></div><div class="screen"><img src="media/nserp-clean.jpg" alt="Visão geral"></div><div class="dev-foot"><span></span><button class="vbtn" type="button" data-video="media/nserp-demo.mp4" data-title="nsERP"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7.5-4.5z"/></svg><span data-t="t01v">Vídeo · 37 s</span></button></div></div></div>
       </div>
     </article>
     <article class="tour" id="caso-edu">
-      <div class="t-head"><div class="t-title"><span class="num">02</span><h3 class="disp">EduFuturo</h3></div><div><p data-t="t02d">Plataforma de ensino online com área para alunos e para instrutores. Os alunos aprendem ao seu ritmo e os instrutores veem quem precisa de ajuda.</p><div class="t-meta"><span data-t="t02m0">Full-stack</span><span data-t="t02m1">Web · Telemóvel</span><span data-t="t02m2">IA</span><span data-t="t02m3">2026</span></div></div></div>
+      <div class="t-head"><div class="t-title"><span class="num">02</span><h3 class="disp">EduFuturo</h3></div><div><p data-t="t02d">Plataforma de ensino online feita para Moçambique, em português, changana, sena e inglês. Cursos em vídeo, exercícios corrigidos, certificados, chat com chamadas, mentorias e um assistente de estudo com IA. Instala-se como aplicação e poupa dados.</p><div class="t-meta"><span data-t="t02m0">Laravel 12</span><span data-t="t02m1">React 19 + TypeScript</span><span data-t="t02m2">Inertia · Tailwind 4</span><span data-t="t02m3">PWA</span><span data-t="t02m4">IA · OpenAI</span></div></div></div>
       <div class="t-grid">
         <ol class="steps"><li class="step on" data-img="media/c/edu-8.jpg"><span class="n">01</span><div><h4 data-t="t02s0h">Início do aluno</h4><p data-t="t02s0p">A aula em curso, a meta semanal, os pontos e os certificados num só ecrã.</p></div></li><li class="step" data-img="media/c/edu-17.jpg"><span class="n">02</span><div><h4 data-t="t02s1h">Catálogo de cursos</h4><p data-t="t02s1p">Cursos por categoria, cada um com o progresso do aluno.</p></div></li><li class="step" data-img="media/c/edu-42.jpg"><span class="n">03</span><div><h4 data-t="t02s2h">Painel do instrutor</h4><p data-t="t02s2p">Gestão de aulas, exercícios, alunos e avaliações.</p></div></li><li class="step" data-img="media/c/edu-50.jpg"><span class="n">04</span><div><h4 data-t="t02s3h">Analítica da turma</h4><p data-t="t02s3p">Atividade de estudo, inscrições e conclusões, com exportação para CSV.</p></div></li></ol>
         <div class="stage"><div class="dev"><div class="bar"><i></i><i></i><i></i><span>EduFuturo Digital</span><span class="segs"><b></b><b></b><b></b><b></b></span></div><div class="screen"><img src="media/c/edu-8.jpg" alt="Início do aluno"></div><div class="dev-foot"><span></span><button class="vbtn" type="button" data-video="media/edufuturo-demo.mp4" data-title="EduFuturo Digital"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7.5-4.5z"/></svg><span data-t="t02v">Vídeo · 76 s</span></button></div></div></div>
       </div>
     </article>
 
+    <article class="soon" id="caso-nsedu">
+      <div class="soon-copy">
+        <div class="t-title"><span class="num">03</span><h3 class="disp">NSEdu</h3></div>
+        <p data-t="nsD">Sistema de gestão para escolas e faculdades, da mesma família do nsERP. Está em desenvolvimento e vai aparecer aqui com capturas assim que a primeira versão estiver pronta.</p>
+        <div class="t-meta"><span class="dot" data-t="nsM0">Em desenvolvimento</span><span data-t="nsM1">Gestão escolar</span><span>2026</span></div>
+        <a class="btn mag" href="https://github.com/nunuDev-55/Sistema-de-faculdade-escola" target="_blank" rel="noopener"><span data-t="nsL">Acompanhar no GitHub</span> <svg viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7"/></svg></a>
+      </div>
+      <div class="soon-vis" aria-hidden="true">
+        <div class="sk-bar"><i></i><i></i><i></i><span>NSEdu</span></div>
+        <div class="sk-body">
+          <div class="sk-side"><b></b><b></b><b></b><b></b><b></b></div>
+          <div class="sk-main"><div class="sk-row"><b></b><b></b><b></b></div><div class="sk-chart"></div><div class="sk-list"><b></b><b></b><b></b></div></div>
+        </div>
+        <span class="sk-badge" data-t="nsBadge">Em construção</span>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -425,7 +515,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
     <ol class="tl" id="tl">
       <span class="line" aria-hidden="true"><i id="tlline"></i></span>
       <li><span class="when" data-t="tl1w">ATUAL</span><h3 data-t="tl1h">Programador full-stack, independente</h3><p data-t="tl1p">Sistemas e aplicações à medida para empresas e escolas, do levantamento de requisitos à publicação.</p></li>
-      <li><span class="when">2026</span><h3 data-t="tl2h">nsERP e EduFuturo Digital</h3><p data-t="tl2p">Concebi e desenvolvi os dois sistemas de ponta a ponta: base de dados, API, interface e versão para telemóvel.</p></li>
+      <li><span class="when">2026</span><h3 data-t="tl2h">nsERP e EduFuturo Digital</h3><p data-t="tl2p">Concebi e desenvolvi os dois sistemas de ponta a ponta com Laravel 12, React 19 e TypeScript. O nsERP é o meu projeto de monografia, testado na LemServ.</p></li>
       <li><span class="when" data-t="tl3w">EM CURSO · 4.º ANO</span><h3 data-t="tl3h">Licenciatura em Informática de Economia e Gestão</h3><p data-t="tl3p">Programação, bases de dados e sistemas de informação, a par de economia, contabilidade e gestão.</p></li>
     </ol>
   </div>
@@ -495,10 +585,12 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
   new MutationObserver(runTheme).observe(root,{attributes:true,attributeFilter:['data-theme']});
   let lenis=null,gsapReady=false;
   const I={pt:{
+    stCap:'Programador full-stack · Moçambique',k1s:'Gestão empresarial · Laravel + React',k2s:'PWA em 4 línguas',k3t:'4.º ano',k3s:'Informática de Economia e Gestão',
+    nsD:'Sistema de gestão para escolas e faculdades, da mesma família do nsERP. Está em desenvolvimento e vai aparecer aqui com capturas assim que a primeira versão estiver pronta.',nsM0:'Em desenvolvimento',nsM1:'Gestão escolar',nsL:'Acompanhar no GitHub',nsBadge:'Em construção',
     ld:'Portfólio · 2026',n1:'Projetos',n3:'Percurso',n4:'Contacto',h1:'Programador full-stack em Moçambique. Construo',h2:'para empresas e escolas.',avail:'Disponível',mz:'Moçambique',
     b1:'Ver projetos',b2:'Currículo',scroll:'Role',about:'(Sobre)',projT:'Proje<span class="o">tos</span>',drag:'Arraste a esfera',g1:'Linguagens',g2:'Frameworks e bibliotecas',g3:'Dados, ferramentas e integrações',
     pathT:'Percur<span class="o">so</span>',pathS:'Experiência e formação',tl1w:'ATUAL',tl1h:'Programador full-stack, independente',tl1p:'Sistemas e aplicações à medida para empresas e escolas, do levantamento de requisitos à publicação.',
-    tl2h:'nsERP e EduFuturo Digital',tl2p:'Concebi e desenvolvi os dois sistemas de ponta a ponta: base de dados, API, interface e versão para telemóvel.',tl3w:'EM CURSO · 4.º ANO',tl3h:'Licenciatura em Informática de Economia e Gestão',tl3p:'Programação, bases de dados e sistemas de informação, a par de economia, contabilidade e gestão.',
+    tl2h:'nsERP e EduFuturo Digital',tl2p:'Concebi e desenvolvi os dois sistemas de ponta a ponta com Laravel 12, React 19 e TypeScript. O nsERP é o meu projeto de monografia, testado na LemServ.',tl3w:'EM CURSO · 4.º ANO',tl3h:'Licenciatura em Informática de Economia e Gestão',tl3p:'Programação, bases de dados e sistemas de informação, a par de economia, contabilidade e gestão.',
     cS:'(Contacto) · respondo em até 24 horas',cta1:'Vamos',cta2:'falar',fT:'Conte-me sobre o seu projeto',ty1:'Sistema de gestão',ty2:'Site ou loja online',ty3:'Aplicação web',ty4:'Vaga de emprego',ty5:'Outro',
     fN:'O seu nome',fM:'O que precisa?',fH:'A mensagem abre no WhatsApp já escrita. Só precisa de carregar em enviar.',fB:'Enviar pelo WhatsApp',phone:'Telefone',sendMsg:'Enviar mensagem',open:'Abrir ↗',copy:'Copiar',
     cmdHint:'Atalhos',top:'Voltar ao topo',cmdP:'Escreva um comando ou procure…',k1:'↑↓ navegar',k2:'Enter abrir',k3:'Esc fechar',close:'Fechar',cmdA:'Abrir comandos',themeA:'Mudar tema',
@@ -509,10 +601,12 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
     tyP:{ty1:'um sistema de gestão',ty2:'um site ou loja online',ty3:'uma aplicação web',ty4:'uma vaga de emprego para si',ty5:'um projeto'},
     msg:(n,t,m)=>`Olá Nuryan!${n?` Sou ${n}.`:''} Gostava de falar sobre ${t}.${m?`\n\n${m}`:''}`
   },en:{
+    stCap:'Full-stack developer · Mozambique',k1s:'Business management · Laravel + React',k2s:'PWA in 4 languages',k3t:'4th year',k3s:'CS for Economics and Management',
+    nsD:'A management system for schools and universities, from the same family as nsERP. It is in development and will show up here with screenshots as soon as the first version is ready.',nsM0:'In development',nsM1:'School management',nsL:'Follow on GitHub',nsBadge:'Under construction',
     ld:'Portfolio · 2026',n1:'Projects',n3:'Journey',n4:'Contact',h1:'Full-stack developer in Mozambique. I build',h2:'for companies and schools.',avail:'Available',mz:'Mozambique',
     b1:'See projects',b2:'Résumé',scroll:'Scroll',about:'(About)',projT:'Pro<span class="o">jects</span>',drag:'Drag the sphere',g1:'Languages',g2:'Frameworks and libraries',g3:'Data, tools and integrations',
     pathT:'Jour<span class="o">ney</span>',pathS:'Experience and education',tl1w:'NOW',tl1h:'Full-stack developer, freelance',tl1p:'Custom systems and applications for companies and schools, from requirements to launch.',
-    tl2h:'nsERP and EduFuturo Digital',tl2p:'I designed and built both systems end to end: database, API, interface and mobile version.',tl3w:'IN PROGRESS · 4TH YEAR',tl3h:'Degree in Computer Science for Economics and Management',tl3p:'Programming, databases and information systems, alongside economics, accounting and management.',
+    tl2h:'nsERP and EduFuturo Digital',tl2p:'I designed and built both systems end to end with Laravel 12, React 19 and TypeScript. nsERP is my thesis project, piloted at LemServ.',tl3w:'IN PROGRESS · 4TH YEAR',tl3h:'Degree in Computer Science for Economics and Management',tl3p:'Programming, databases and information systems, alongside economics, accounting and management.',
     cS:'(Contact) · I reply within 24 hours',cta1:"Let's",cta2:'talk',fT:'Tell me about your project',ty1:'Management system',ty2:'Website or online store',ty3:'Web application',ty4:'Job opportunity',ty5:'Other',
     fN:'Your name',fM:'What do you need?',fH:'The message opens in WhatsApp already written. Just press send.',fB:'Send via WhatsApp',phone:'Phone',sendMsg:'Send a message',open:'Open ↗',copy:'Copy',
     cmdHint:'Shortcuts',top:'Back to top',cmdP:'Type a command or search…',k1:'↑↓ navigate',k2:'Enter select',k3:'Esc close',close:'Close',cmdA:'Open commands',themeA:'Change theme',
@@ -523,7 +617,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
     tyP:{ty1:'a management system',ty2:'a website or online store',ty3:'a web application',ty4:'a job opportunity for you',ty5:'a project'},
     msg:(n,t,m)=>`Hi Nuryan!${n?` I'm ${n}.`:''} I'd like to talk about ${t}.${m?`\n\n${m}`:''}`
   }};
-  const TOURS={"pt": {"t01d": "Sistema de gestão para pequenas e médias empresas. Junta num só lugar o que antes estava em folhas de cálculo e cadernos: vendas, reservas, facturação e stock.", "t01v": "Vídeo · 37 s", "t01m0": "Full-stack", "t01m1": "Desktop · Web · Telemóvel", "t01m2": "M‑Pesa", "t01m3": "2026", "t01s0h": "Visão geral", "t01s0p": "O painel mostra num relance o que está por vender, entregar, facturar e receber.", "t01s1h": "Produtos e stock", "t01s1p": "Produtos com preços de venda e de aluguer, e as quantidades em armazém.", "t01s2h": "Reservas e orçamentos", "t01s2p": "O sistema calcula IVA, dias e totais à medida que as linhas são adicionadas.", "t01s3h": "Pagamentos por M‑Pesa", "t01s3p": "Cada pagamento recebido fica ligado à factura, que fecha sozinha quando fica saldada.", "t01s4h": "Loja online", "t01s4p": "Os clientes fazem pedidos pelo site da empresa, ligado ao inventário em tempo real.", "t02d": "Plataforma de ensino online com área para alunos e para instrutores. Os alunos aprendem ao seu ritmo e os instrutores veem quem precisa de ajuda.", "t02v": "Vídeo · 76 s", "t02m0": "Full-stack", "t02m1": "Web · Telemóvel", "t02m2": "IA", "t02m3": "2026", "t02s0h": "Início do aluno", "t02s0p": "A aula em curso, a meta semanal, os pontos e os certificados num só ecrã.", "t02s1h": "Catálogo de cursos", "t02s1p": "Cursos por categoria, cada um com o progresso do aluno.", "t02s2h": "Painel do instrutor", "t02s2p": "Gestão de aulas, exercícios, alunos e avaliações.", "t02s3h": "Analítica da turma", "t02s3p": "Atividade de estudo, inscrições e conclusões, com exportação para CSV."}, "en": {"t01d": "A management system for small and medium businesses. It brings together what used to live in spreadsheets and notebooks: sales, bookings, invoicing and stock.", "t01v": "Video · 37 s", "t01m0": "Full-stack", "t01m1": "Desktop · Web · Mobile", "t01m2": "M‑Pesa", "t01m3": "2026", "t01s0h": "Overview", "t01s0p": "The dashboard shows at a glance what is waiting to be sold, delivered, invoiced and collected.", "t01s1h": "Products and stock", "t01s1p": "Products with sale and rental prices, and the quantities in the warehouse.", "t01s2h": "Bookings and quotes", "t01s2p": "The system calculates VAT, days and totals as lines are added.", "t01s3h": "M‑Pesa payments", "t01s3p": "Each payment received is linked to its invoice, which closes itself once fully paid.", "t01s4h": "Online store", "t01s4p": "Customers order through the company website, linked to the inventory in real time.", "t02d": "An online learning platform with areas for students and instructors. Students learn at their own pace and instructors see who needs help.", "t02v": "Video · 76 s", "t02m0": "Full-stack", "t02m1": "Web · Mobile", "t02m2": "AI", "t02m3": "2026", "t02s0h": "Student home", "t02s0p": "The current lesson, weekly goal, points and certificates on one screen.", "t02s1h": "Course catalogue", "t02s1p": "Courses by category, each with the student's progress.", "t02s2h": "Instructor dashboard", "t02s2p": "Manage lessons, exercises, students and assessments.", "t02s3h": "Class analytics", "t02s3p": "Study activity, enrolments and completions, exportable to CSV."}};
+  const TOURS={"pt": {"t01d": "Sistema de gestão (ERP) para pequenas e médias empresas moçambicanas, feito como projeto de monografia e testado na LemServ. Junta vendas, reservas, facturação, compras e stock num só lugar, com o nome, o logótipo e as cores de cada empresa configuráveis.", "t01v": "Vídeo · 37 s", "t01m0": "Laravel 12", "t01m1": "React 19 + TypeScript", "t01m2": "Inertia · shadcn/ui", "t01m3": "MariaDB", "t01m4": "M‑Pesa", "t01s0h": "Visão geral", "t01s0p": "O painel mostra num relance o que está por vender, entregar, facturar e receber.", "t01s1h": "Produtos e stock", "t01s1p": "Produtos com preços de venda e de aluguer, e as quantidades em armazém.", "t01s2h": "Reservas e orçamentos", "t01s2p": "O sistema calcula IVA, dias e totais à medida que as linhas são adicionadas.", "t01s3h": "Pagamentos por M‑Pesa", "t01s3p": "Cada pagamento recebido fica ligado à factura, que fecha sozinha quando fica saldada.", "t01s4h": "Loja online", "t01s4p": "Os clientes fazem pedidos pelo site da empresa, ligado ao inventário em tempo real.", "t02d": "Plataforma de ensino online feita para Moçambique, em português, changana, sena e inglês. Cursos em vídeo, exercícios corrigidos, certificados, chat com chamadas, mentorias e um assistente de estudo com IA. Instala-se como aplicação e poupa dados.", "t02v": "Vídeo · 76 s", "t02m0": "Laravel 12", "t02m1": "React 19 + TypeScript", "t02m2": "Inertia · Tailwind 4", "t02m3": "PWA", "t02m4": "IA · OpenAI", "t02s0h": "Início do aluno", "t02s0p": "A aula em curso, a meta semanal, os pontos e os certificados num só ecrã.", "t02s1h": "Catálogo de cursos", "t02s1p": "Cursos por categoria, cada um com o progresso do aluno.", "t02s2h": "Painel do instrutor", "t02s2p": "Gestão de aulas, exercícios, alunos e avaliações.", "t02s3h": "Analítica da turma", "t02s3p": "Atividade de estudo, inscrições e conclusões, com exportação para CSV."}, "en": {"t01d": "A management system (ERP) for small and medium Mozambican businesses, built as my thesis project and piloted at LemServ. It brings sales, bookings, invoicing, purchasing and stock together, with each company's name, logo and colours configurable.", "t01v": "Video · 37 s", "t01m0": "Laravel 12", "t01m1": "React 19 + TypeScript", "t01m2": "Inertia · shadcn/ui", "t01m3": "MariaDB", "t01m4": "M‑Pesa", "t01s0h": "Overview", "t01s0p": "The dashboard shows at a glance what is waiting to be sold, delivered, invoiced and collected.", "t01s1h": "Products and stock", "t01s1p": "Products with sale and rental prices, and the quantities in the warehouse.", "t01s2h": "Bookings and quotes", "t01s2p": "The system calculates VAT, days and totals as lines are added.", "t01s3h": "M‑Pesa payments", "t01s3p": "Each payment received is linked to its invoice, which closes itself once fully paid.", "t01s4h": "Online store", "t01s4p": "Customers order through the company website, linked to the inventory in real time.", "t02d": "An online learning platform built for Mozambique, in Portuguese, Changana, Sena and English. Video courses, graded exercises, certificates, chat with calls, mentoring and an AI study assistant. It installs as an app and saves data.", "t02v": "Video · 76 s", "t02m0": "Laravel 12", "t02m1": "React 19 + TypeScript", "t02m2": "Inertia · Tailwind 4", "t02m3": "PWA", "t02m4": "AI · OpenAI", "t02s0h": "Student home", "t02s0p": "The current lesson, weekly goal, points and certificates on one screen.", "t02s1h": "Course catalogue", "t02s1p": "Courses by category, each with the student's progress.", "t02s2h": "Instructor dashboard", "t02s2p": "Manage lessons, exercises, students and assessments.", "t02s3h": "Class analytics", "t02s3p": "Study activity, enrolments and completions, exportable to CSV."}};
   ['pt','en'].forEach(l=>Object.assign(I[l],TOURS[l]));
   let lang=store.get('ns-lang')||'pt';
   const L=()=>I[lang];
@@ -644,39 +738,6 @@ void main(){
   let mx=0,my=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;},{passive:true});
 
   if(window.THREE){
-    /* 1. hero: liquid blob with orbit rings */
-    (function(){const cv=document.getElementById('blob'),R=mkRenderer(cv);if(!R)return;
-      const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(32,1,.1,100);cam.position.z=6.2;
-      const noise=`vec3 mod289(vec3 x){return x-floor(x*(1./289.))*289.;}vec4 mod289(vec4 x){return x-floor(x*(1./289.))*289.;}vec4 permute(vec4 x){return mod289(((x*34.)+1.)*x);}vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-.85373472095314*r;}
-float snoise(vec3 v){const vec2 C=vec2(1./6.,1./3.);const vec4 D=vec4(0.,.5,1.,2.);vec3 i=floor(v+dot(v,C.yyy));vec3 x0=v-i+dot(i,C.xxx);vec3 g=step(x0.yzx,x0.xyz);vec3 l=1.-g;vec3 i1=min(g.xyz,l.zxy);vec3 i2=max(g.xyz,l.zxy);vec3 x1=x0-i1+C.xxx;vec3 x2=x0-i2+C.yyy;vec3 x3=x0-D.yyy;i=mod289(i);vec4 p=permute(permute(permute(i.z+vec4(0.,i1.z,i2.z,1.))+i.y+vec4(0.,i1.y,i2.y,1.))+i.x+vec4(0.,i1.x,i2.x,1.));float n_=.142857142857;vec3 ns=n_*D.wyz-D.xzx;vec4 j=p-49.*floor(p*ns.z*ns.z);vec4 x_=floor(j*ns.z);vec4 y_=floor(j-7.*x_);vec4 x=x_*ns.x+ns.yyyy;vec4 y=y_*ns.x+ns.yyyy;vec4 h=1.-abs(x)-abs(y);vec4 b0=vec4(x.xy,y.xy);vec4 b1=vec4(x.zw,y.zw);vec4 s0=floor(b0)*2.+1.;vec4 s1=floor(b1)*2.+1.;vec4 sh=-step(h,vec4(0.));vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;vec3 p0=vec3(a0.xy,h.x);vec3 p1=vec3(a0.zw,h.y);vec3 p2=vec3(a1.xy,h.z);vec3 p3=vec3(a1.zw,h.w);vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;vec4 m=max(.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.);m=m*m;return 42.*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));}`;
-      const U={t:{value:0},amp:{value:.32},ca:{value:new THREE.Color('#4f6bff')},cb:{value:new THREE.Color('#a9b6ff')},ck:{value:new THREE.Color('#08090b')}};
-      const mat=new THREE.ShaderMaterial({uniforms:U,
-        vertexShader:noise+`uniform float t,amp;varying vec3 vN,vW;varying float vD;
-float f(vec3 p){return snoise(p*.9+vec3(0.,0.,t*.2))*.75+snoise(p*2.1-vec3(t*.14))*.25;}
-void main(){vec3 p=position;float d=f(p);vec3 np=p+normal*d*amp;float e=.01;vec3 tg=normalize(cross(normal,vec3(0.,1.,.01)));vec3 bt=normalize(cross(normal,tg));
-vec3 a=p+tg*e;vec3 b=p+bt*e;a+=normal*f(a)*amp;b+=normal*f(b)*amp;vec3 n=normalize(cross(a-np,b-np));
-vD=d;vN=normalize(mat3(modelMatrix)*n);vec4 w=modelMatrix*vec4(np,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
-        fragmentShader:`uniform float t;uniform vec3 ca,cb,ck;varying vec3 vN,vW;varying float vD;
-void main(){vec3 n=normalize(vN);vec3 v=normalize(cameraPosition-vW);if(dot(n,v)<0.)n=-n;float fr=pow(1.-max(dot(n,v),0.),2.2);
-vec3 L=normalize(vec3(-.6,.8,.7));float dif=max(dot(n,L),0.);vec3 H=normalize(L+v);float sp=pow(max(dot(n,H),0.),70.);
-vec3 base=mix(ck,ca,smoothstep(-.7,.15,vD));base=mix(base,cb,smoothstep(.1,.75,vD));float bands=.5+.5*sin(vD*16.+t*.7);
-vec3 col=base*(.22+.78*dif)+ca*bands*.08+fr*mix(ca,vec3(1.),.45)*1.2+sp;gl_FragColor=vec4(col,1.);}`});
-      const mesh=new THREE.Mesh(new THREE.IcosahedronGeometry(1.25,innerWidth<760?30:56),mat);scene.add(mesh);
-      const ringM=new THREE.MeshBasicMaterial({color:0xa9b6ff,transparent:true,opacity:.35});
-      const r1=new THREE.Mesh(new THREE.TorusGeometry(2.05,.006,8,220),ringM);r1.rotation.x=1.2;scene.add(r1);
-      const r2=new THREE.Mesh(new THREE.TorusGeometry(2.45,.004,8,220),ringM.clone());r2.material.opacity=.15;r2.rotation.set(1.05,.5,0);scene.add(r2);
-      const moon=new THREE.Mesh(new THREE.SphereGeometry(.07,24,24),new THREE.MeshBasicMaterial({color:0x4f6bff}));scene.add(moon);
-      const bp=l=>{U.ck.value.set(l?'#dfe3f7':'#08090b');U.cb.value.set(l?'#8ea0ff':'#a9b6ff');U.ca.value.set(l?'#3a52f0':'#4f6bff');ringM.color.set(l?'#3a52f0':'#a9b6ff');r2.material.color.set(l?'#3a52f0':'#a9b6ff');moon.material.color.set(l?'#3a52f0':'#4f6bff');};bp(isLight());themeHooks.push(bp);
-      fit(R,cam,cv);addEventListener('resize',()=>fit(R,cam,cv));
-      let rx=0,ry=0,near=0;
-      scenes.blob={mesh};
-      runWhenVisible(cv,t=>{U.t.value=t;rx+=(my*.7-rx)*.04;ry+=(mx*1.1-ry)*.04;
-        const r=cv.getBoundingClientRect(),cx=(r.left+r.width/2)/innerWidth-.5,cy=(r.top+r.height/2)/innerHeight-.5,d=Math.hypot(mx-cx,my-cy);near+=(Math.max(0,1-d*2.2)-near)*.05;
-        mesh.rotation.set(rx+t*.05,ry+t*.12,0);U.amp.value=.28+near*.3;mesh.position.y=Math.sin(t*.6)*.07;
-        r1.rotation.z=t*.15;r2.rotation.z=-t*.1;const a=t*.6;moon.position.set(Math.cos(a)*2.05,Math.sin(a)*2.05*Math.cos(1.2),Math.sin(a)*2.05*Math.sin(1.2));
-        R.render(scene,cam);});
-    })();
-
     /* 2. statement: field of data cubes that ripple */
     (function(){const cv=document.getElementById('field'),R=mkRenderer(cv);if(!R)return;
       const scene=new THREE.Scene();scene.fog=new THREE.Fog(0x08090b,9,26);
@@ -719,6 +780,15 @@ vec3 col=base*(.22+.78*dif)+ca*bands*.08+fr*mix(ca,vec3(1.),.45)*1.2+sp;gl_FragC
       runWhenVisible(cv,t=>{pts.rotation.y=t*.08;rx+=((.45+my*.5)-rx)*.04;rz+=((mx*.4)-rz)*.04;grp.rotation.x=rx;grp.rotation.z=rz;R.render(scene,cam);});
     })();
   }
+
+  /* studio: 3D tilt + floating cards parallax */
+  (function(){const w=document.getElementById('studio');if(!w||reduce||!fine)return;const st=w.querySelector('.studio'),cards=[...w.querySelectorAll('.st-card')];
+    let tx=0,ty=0,cx=0,cy=0;const hero=document.getElementById('hero');
+    hero.addEventListener('pointermove',e=>{const r=w.getBoundingClientRect();tx=((e.clientX-(r.left+r.width/2))/r.width);ty=((e.clientY-(r.top+r.height/2))/r.height);});
+    hero.addEventListener('pointerleave',()=>{tx=ty=0;});
+    (function loop(){cx+=(tx-cx)*.08;cy+=(ty-cy)*.08;st.style.transform=`rotateY(${(cx*9).toFixed(2)}deg) rotateX(${(-cy*7).toFixed(2)}deg)`;
+      cards.forEach(c=>{const d=+c.dataset.depth;c.style.transform=`translate3d(${(cx*d).toFixed(1)}px,${(cy*d).toFixed(1)}px,0)`;});requestAnimationFrame(loop);})();
+  })();
 
   /* 3D sphere */
   (function(){const sp=document.getElementById('sphere');const its=[...sp.querySelectorAll('.orb')],N=its.length;
@@ -826,7 +896,9 @@ vec3 col=base*(.22+.78*dif)+ca*bands*.08+fr*mix(ca,vec3(1.),.45)*1.2+sp;gl_FragC
     .from('.h-in',{y:30,opacity:0,duration:1.1,stagger:.08},'-=1.1')
     .from('.nav .wrap > *',{y:-20,opacity:0,duration:1,stagger:.06},'-=1.1')
     .from('#gl',{opacity:0,duration:2},0)
-    .from('#blob',{scale:.3,opacity:0,rotate:-40,duration:2.2},.1)
+    .from('#studio',{y:80,rotateY:-18,rotateX:8,opacity:0,duration:1.8},.15)
+    .from('#studio .st-me',{yPercent:12,opacity:0,duration:1.6},.35)
+    .from('#studio .st-card',{scale:.6,opacity:0,y:20,duration:1.1,stagger:.12,ease:'back.out(1.7)'},.8)
     .from('.rail',{xPercent:(i)=>i?-10:10,opacity:0,duration:1.6},'-=1.2');
   if(root.classList.contains('loading')){
     const o={v:0},n=document.getElementById('ldn'),b=document.getElementById('ldb');
@@ -839,7 +911,9 @@ vec3 col=base*(.22+.78*dif)+ca*bands*.08+fr*mix(ca,vec3(1.),.45)*1.2+sp;gl_FragC
   /* hero parts drift on scroll */
   gsap.to('#name .mask:first-child .ln',{xPercent:-10,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
   gsap.to('#name .row2 .ln',{xPercent:8,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
-  gsap.to('#blob',{yPercent:-30,scale:.7,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('#studio',{yPercent:-12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.from('.ab-ph',{y:60,rotate:-4,opacity:0,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'.ab-ph',start:'top 88%'}});
+  gsap.from('.soon',{y:60,opacity:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:'.soon',start:'top 88%'}});
   gsap.fromTo('#galaxy',{scale:.6,rotate:-30},{scale:1,rotate:0,ease:'none',scrollTrigger:{trigger:'#contacto',start:'top bottom',end:'top 20%',scrub:true}});
   gsap.to('#hero .wrap',{opacity:.2,y:-60,ease:'none',scrollTrigger:{trigger:'#hero',start:'center top',end:'bottom top',scrub:true}});
 

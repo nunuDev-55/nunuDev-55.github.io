@@ -6,8 +6,9 @@ Portfólio pessoal de **Nuryan Sultane**, programador full-stack em Moçambique.
 
 ## Projetos em destaque
 
-- **nsERP**: sistema de gestão empresarial com vendas, reservas, orçamentos, facturação, stock, pagamentos M-Pesa e loja online.
-- **EduFuturo Digital**: plataforma de ensino online com cursos em vídeo, exercícios, certificados, assistente de IA e analítica para instrutores.
+- **nsERP**: sistema de gestão empresarial (projeto de monografia) com vendas, reservas, orçamentos, facturação, stock, pagamentos M-Pesa e loja online.
+- **EduFuturo Digital**: plataforma de ensino online em português, changana, sena e inglês, com cursos em vídeo, exercícios, certificados, chat, assistente de IA e analítica para instrutores.
+- **NSEdu**: sistema de gestão para escolas e faculdades (em desenvolvimento).
 
 ## Funcionalidades do site
 
