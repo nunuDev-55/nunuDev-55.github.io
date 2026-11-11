@@ -16,6 +16,7 @@ Portfólio pessoal de **Nuryan Sultane**, programador full-stack em Moçambique.
 - Esfera 3D de tecnologias e galáxia de partículas em Canvas, sem bibliotecas 3D
 - Animações ligadas à rolagem (GSAP + ScrollTrigger) e rolagem suave (Lenis)
 - Paleta de comandos (Ctrl/⌘ + K)
+- Serviços ligados ao formulário de contacto
 - Formulário que prepara a mensagem no WhatsApp
 - Currículo em PDF
 
