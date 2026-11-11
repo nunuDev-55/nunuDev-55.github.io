@@ -4,9 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Nuryan Sultane, programador full-stack em Moçambique. Sistemas de gestão e aplicações web com Laravel, React, TypeScript e MariaDB.">
+<meta name="author" content="Nuryan Sultane">
+<link rel="canonical" href="https://nunudev-55.github.io/">
 <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f1f2f6" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:url" content="https://nunudev-55.github.io/">
 <meta property="og:title" content="Nuryan Sultane · Programador Full-stack">
 <meta property="og:description" content="Sistemas de gestão e aplicações web com Laravel, React e TypeScript. Projetos: nsERP, EduFuturo Digital e NSEdu.">
 <meta property="og:image" content="https://nunudev-55.github.io/media/og.jpg">
@@ -14,6 +18,9 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090b'/%3E%3Ctext x='32' y='42' font-family='Arial Black,Arial' font-weight='900' font-size='26' text-anchor='middle' fill='%23ffffff'%3ENS%3C/text%3E%3Ccircle cx='51' cy='51' r='5' fill='%234f6bff'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="media/me-suit-m.webp" imagesrcset="media/me-suit-m.webp 842w, media/me-suit.webp 1745w" imagesizes="(max-width: 640px) 70vw, 48vw" fetchpriority="high">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Nuryan Sultane", "jobTitle": "Programador Full-stack", "description": "Nuryan Sultane, programador full-stack em Moçambique. Sistemas de gestão e aplicações web com Laravel, React, TypeScript e MariaDB.", "url": "https://nunudev-55.github.io/", "image": "https://nunudev-55.github.io/media/og.jpg", "email": "mailto:sultanenuryan8@gmail.com", "telephone": "+258875043136", "address": {"@type": "PostalAddress", "addressCountry": "MZ"}, "sameAs": ["https://github.com/nunuDev-55", "https://www.linkedin.com/in/nuryan-sultane-01371044a"], "knowsAbout": ["Laravel", "React", "TypeScript", "PHP", "Inertia.js", "MariaDB", "Tailwind CSS", "Sistemas de gestão (ERP)"]}</script>
 <title>Nuryan Sultane · Programador Full-stack</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,8 +88,16 @@ h1,h2,h3,p,ul,ol{margin:0}
 .cur.label .l{transform:translate(-50%,-50%) scale(1)}
 
 /* nav */
-.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:80;mix-blend-mode:difference;color:#fff}
-.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px;gap:16px}
+.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:80;color:var(--fg);border-bottom:1px solid transparent;transition:background-color .35s,border-color .35s}
+.nav.scrolled{background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom-color:var(--line)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px;gap:16px;transition:height .35s var(--ease)}
+.nav.scrolled .wrap{height:60px}
+.nav nav{position:relative}
+.nav nav a{color:var(--muted);transition:color .25s}
+.nav nav a:hover,.nav nav a.on{color:var(--fg)}
+.nav-ind{position:absolute;bottom:-9px;left:0;width:0;height:2px;border-radius:2px;background:var(--acc);opacity:0;transition:left .45s var(--ease),width .45s var(--ease),opacity .3s}
+.skip{position:fixed;left:16px;top:calc(12px + env(safe-area-inset-top,0px));z-index:210;padding:10px 16px;border-radius:10px;background:var(--acc);color:#fff;font-weight:500;transform:translateY(-200%);transition:transform .25s}
+.skip:focus{transform:none}
 .brand{font-family:var(--display);font-weight:800;font-stretch:125%;font-size:1.05rem;letter-spacing:-.02em}
 .nav nav{display:flex;gap:24px;font-size:.9rem}
 .roll{position:relative;display:inline-block;overflow:hidden;height:1.4em;line-height:1.4em}
@@ -106,7 +121,7 @@ h1,h2,h3,p,ul,ol{margin:0}
 .h-arcs path{fill:none;stroke:var(--acc);stroke-width:1.3;vector-effect:non-scaling-stroke;opacity:.55;stroke-dasharray:1;stroke-dashoffset:0;animation:arc 2.6s var(--ease) both}
 .h-arcs path.a2{animation-delay:.25s;opacity:.4}.h-arcs path.a3{animation-delay:.5s;opacity:.3}
 @keyframes arc{from{stroke-dashoffset:1}}
-.h-photo{position:absolute;z-index:0;bottom:0;right:max(-2vw,calc((100vw - 1440px)/2));height:min(94%,940px);aspect-ratio:1745/2281;pointer-events:none;will-change:transform}
+.h-photo{position:absolute;z-index:0;bottom:0;right:max(-2vw,calc((100vw - 1440px)/2));height:min(88%,900px);aspect-ratio:1745/2281;pointer-events:none;will-change:transform}
 .h-photo::before{content:"";position:absolute;inset:8% 0 0 8%;z-index:-1;border-radius:50% 50% 0 0;background:radial-gradient(60% 50% at 50% 35%,color-mix(in srgb,var(--acc) var(--gs),transparent),transparent 70%);filter:blur(10px)}
 .h-photo img{display:block;height:100%;width:auto;max-width:none;-webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 99%);mask-image:linear-gradient(180deg,#000 78%,transparent 99%);}
 .hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;z-index:-1;pointer-events:none;background:linear-gradient(transparent,var(--bg))}
@@ -206,23 +221,28 @@ h1,h2,h3,p,ul,ol{margin:0}
 .sh h2 .o{color:var(--acc)}
 
 /* tours */
-.work{padding-block:clamp(80px,10vw,140px) 0}
-.tour{padding-bottom:clamp(80px,10vw,140px)}
-.t-head{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:end;margin-bottom:28px}
-@media(min-width:1000px){.t-head{grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:40px;align-items:start}}
+.work{padding-block:clamp(64px,8vw,110px) 0}
+.tour{padding-bottom:clamp(64px,8vw,110px)}
+.t-head{display:flex;flex-direction:column;gap:clamp(18px,2.4vw,30px);margin-bottom:clamp(28px,4vw,48px)}
+.t-cols{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}
+@media(min-width:1000px){.t-cols{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}}
+.t-intro > p:first-child{color:var(--fg);font-size:clamp(1.02rem,1.35vw,1.2rem);line-height:1.5}
+.t-facts .t-stats{margin-top:0}
 .t-title{display:flex;align-items:flex-end;gap:16px}
 .t-title .num{font-family:var(--mono);font-size:.8rem;color:var(--acc2);padding-bottom:.6em}
-.t-title h3{font-size:clamp(2rem,9vw,5.4rem);white-space:nowrap}
-@media(min-width:1000px){.t-title h3{font-size:min(6.4vw,5.4rem)}}
+.t-title h3{font-size:clamp(1.7rem,8.6vw,6.2rem);white-space:nowrap}
+.soon .t-title h3{font-size:clamp(1.9rem,5vw,4rem)}
 .t-head p{color:var(--muted);max-width:52ch}
 .t-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .t-meta span{font-family:var(--mono);font-size:.72rem;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
 .t-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
 @media(min-width:1000px){.t-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}}
 .steps{list-style:none;padding:0;order:2;display:flex;flex-direction:column}
-@media(min-width:1000px){.steps{order:0;padding-block:4vh 22vh}}
+@media(min-width:1000px){.steps{order:0;padding-block:2vh 12vh}}
+@media(max-width:999px){.steps{margin-top:18px}}
 .step{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;padding:20px 0 20px 0;border-top:1px solid var(--line);opacity:.55;transition:opacity .5s var(--ease);cursor:pointer}
-@media(min-width:1000px){.step{min-height:24vh;align-content:center;border-top:0}}
+@media(min-width:1000px){.step{min-height:19vh;align-content:center;border-top:0}}
+.step:focus-visible{opacity:1}
 .step.on{opacity:1}
 .step .n{font-family:var(--mono);font-size:.8rem;color:var(--muted);padding-top:6px}
 .step.on .n{color:var(--acc2)}
@@ -260,7 +280,7 @@ h1,h2,h3,p,ul,ol{margin:0}
 .t-role b{color:var(--fg);font-weight:600}
 
 /* coming soon project */
-.soon{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center;padding:clamp(22px,3vw,36px);border:1px solid var(--line);border-radius:24px;background:color-mix(in srgb,var(--bg2) 70%,transparent);margin-bottom:clamp(80px,10vw,140px)}
+.soon{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center;padding:clamp(22px,3vw,36px);border:1px solid var(--line);border-radius:24px;background:color-mix(in srgb,var(--bg2) 70%,transparent);margin-bottom:clamp(56px,7vw,96px)}
 @media(min-width:1000px){.soon{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px}}
 .soon-copy{display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0}
 .soon-copy p{color:var(--muted);max-width:50ch}
@@ -282,7 +302,7 @@ h1,h2,h3,p,ul,ol{margin:0}
 .sk-badge{position:absolute;right:14px;bottom:14px;padding:6px 12px;border-radius:999px;background:#f5b041;color:#1a1305;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
 
 /* stack */
-.stack{padding-block:clamp(60px,8vw,120px)}
+.stack{padding-block:clamp(48px,6vw,96px)}
 .st-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;align-items:center}
 @media(min-width:960px){.st-grid{grid-template-columns:6fr 6fr}}
 .sphere{position:relative;width:min(100%,520px);aspect-ratio:1;justify-self:center;touch-action:pan-y;user-select:none;cursor:grab}
@@ -301,7 +321,20 @@ h1,h2,h3,p,ul,ol{margin:0}
 .tg:hover svg{fill:var(--c);transform:rotate(-10deg) scale(1.15)}
 
 /* timeline */
-.path{padding-block:clamp(60px,8vw,120px)}
+.path{padding-block:clamp(48px,6vw,96px)}
+.path-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(36px,5vw,56px);align-items:start}
+@media(min-width:1000px){.path-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fact{display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid var(--line);border-radius:18px;background:color-mix(in srgb,var(--bg2) 60%,transparent);transition:border-color .3s,transform .4s var(--ease)}
+.fact:hover{border-color:color-mix(in srgb,var(--acc) 50%,transparent);transform:translateY(-3px)}
+.fact b{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(2rem,3.4vw,2.9rem);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.fact > span{font-size:.86rem;color:var(--muted);line-height:1.4}
+.cv-card{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 20px;border-radius:18px;background:var(--acc);color:#fff;transition:transform .4s var(--ease),box-shadow .4s}
+.cv-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -18px var(--acc)}
+.cv-card b{display:block;font-weight:600;font-size:1.05rem}
+.cv-card span{font-size:.84rem;opacity:.85}
+.cv-card svg{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .4s var(--ease)}
+.cv-card:hover svg{transform:translateY(3px)}
 .tl{position:relative;list-style:none;padding:0 0 0 36px;max-width:820px}
 .tl .line{position:absolute;left:7px;top:10px;bottom:10px;width:2px;background:var(--line);overflow:hidden;border-radius:2px}
 .tl .line i{position:absolute;inset:0;background:linear-gradient(var(--acc),var(--acc2));transform-origin:top}
@@ -313,7 +346,7 @@ h1,h2,h3,p,ul,ol{margin:0}
 .tl p{color:var(--muted);margin-top:8px;max-width:58ch}
 
 /* contact */
-.contact{padding-block:clamp(80px,12vw,160px) 40px;overflow:hidden}
+.contact{padding-block:clamp(64px,9vw,130px) 40px;overflow:hidden}
 .big-cta{display:block;font-size:clamp(3.2rem,15vw,15rem)}
 .big-cta .ch{font-variation-settings:"wdth" 125,"wght" 800}
 .big-cta .acc{color:var(--acc)}
@@ -337,8 +370,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
 
 /* nav tools */
 .tools{display:flex;align-items:center;gap:4px;margin-left:8px}
-.nb{height:32px;min-width:32px;padding:0 9px;border-radius:8px;display:inline-grid;place-items:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:#fff;border:1px solid rgba(255,255,255,.28);transition:background .25s,border-color .25s}
-.nb:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.6)}
+.nb{height:32px;min-width:32px;padding:0 9px;border-radius:8px;display:inline-grid;place-items:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--fg);border:1px solid color-mix(in srgb,var(--fg) 22%,transparent);transition:background .25s,border-color .25s}
+.nb:hover{background:color-mix(in srgb,var(--fg) 8%,transparent);border-color:color-mix(in srgb,var(--fg) 50%,transparent)}
+.nb.menu{gap:8px;padding:0 12px;height:36px;border-radius:999px;display:inline-flex;align-items:center;font-family:var(--font);font-size:.86rem;letter-spacing:0}
+.nb.menu svg{width:16px;height:16px}
 .nb svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .6s var(--ease)}
 .nb:active svg{transform:rotate(90deg) scale(.85)}
 .nb .moon{display:none}
@@ -382,7 +417,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
 .cmd-in{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
 .cmd-in svg{width:18px;height:18px;fill:none;stroke:var(--muted);stroke-width:1.8;stroke-linecap:round;flex:none}
 .cmd-in input{flex:1;min-width:0;font:inherit;font-size:1rem;color:var(--fg);background:none;border:0;outline:none}
-.cmd-list{list-style:none;margin:0;padding:8px;max-height:360px;overflow:auto}
+.cmd-list{list-style:none;margin:0;padding:8px;max-height:360px;overflow:auto;outline:none}
+@media(pointer:coarse){.cmd-foot{display:none}.cmd-list li{padding:13px 12px}}
 .cmd-list li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;cursor:pointer;font-size:.95rem;color:var(--fg)}
 .cmd-list li small{margin-left:auto;font-family:var(--mono);font-size:.7rem;color:var(--muted)}
 .cmd-list li .ic{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--bg2);font-size:.85rem;flex:none}
@@ -410,7 +446,8 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
   <div><div class="ld-num" id="ldn">000</div><div class="ld-bar"><i id="ldb"></i></div></div>
   <div class="ld-curtain" id="ldc"></div>
 </div>
-<script>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('loading');setTimeout(function(){document.documentElement.classList.remove('loading')},5000);}}catch(e){}</script>
+<script>(function(){var r=false,seen=false;try{r=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}try{seen=sessionStorage.getItem('ns-seen');sessionStorage.setItem('ns-seen','1')}catch(e){}if(!r&&!seen){document.documentElement.classList.add('loading');setTimeout(function(){document.documentElement.classList.remove('loading')},4000)}})();</script>
+<a class="skip" href="#projetos" data-t="skip">Saltar para os projetos</a>
 <div class="grain" aria-hidden="true"></div>
 <div class="cur" id="cur" aria-hidden="true"><div class="d"></div><div class="r"></div><div class="l" id="curl">Ver</div></div>
 <div class="pbar" id="pbar" aria-hidden="true"></div>
@@ -423,6 +460,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
       <a class="roll hide-s" href="#stack"><span>Stack</span><span>Stack</span></a>
       <a class="roll hide-s" href="#percurso"><span data-t="n3">Percurso</span><span data-t="n3">Percurso</span></a>
       <a class="roll" href="#contacto"><span data-t="n4">Contacto</span><span data-t="n4">Contacto</span></a>
+      <span class="nav-ind" id="navInd" aria-hidden="true"></span>
     </nav>
     <div class="tools">
       <button class="nb k" id="cmdBtn" type="button" aria-label="Abrir comandos" data-ta="cmdA">⌘K</button>
@@ -457,6 +495,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
     <div class="h-foot">
       <div class="socials h-in"><div>
         <a href="https://github.com/nunuDev-55" target="_blank" rel="noopener" aria-label="GitHub"><svg class="f" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="https://www.linkedin.com/in/nuryan-sultane-01371044a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="f" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         <a href="https://wa.me/258875043136" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="f" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
         <button type="button" class="hmail" aria-label="Copiar e-mail"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></button>
       </div></div>
@@ -488,16 +527,16 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
   <div class="wrap">
     <div class="sh"><h2 class="disp kin" data-th="projT">Proje<span class="o">tos</span></h2><span class="mono">(03) · 2026</span></div>
     <article class="tour" id="caso-nserp">
-      <div class="t-head"><div class="t-title"><span class="num">01</span><h3 class="disp">nsERP</h3></div><div><p data-t="t01d">Sistema de gestão (ERP) para pequenas e médias empresas moçambicanas. Junta num só lugar o que antes estava em folhas de cálculo e cadernos: vendas, reservas, facturação, compras e stock.</p><p class="t-role" data-th="t01r"><b>Projeto de monografia</b>, testado na <b>LemServ</b> (empresa-piloto). Fiz tudo: análise, base de dados, API, interface e testes.</p><div class="t-meta"><span data-t="t01m0">Laravel 12</span><span data-t="t01m1">React 19 + TypeScript</span><span data-t="t01m2">Inertia · shadcn/ui</span><span data-t="t01m3">MariaDB</span><span data-t="t01m4">M‑Pesa</span></div><div class="t-stats"><div><b>40</b><span data-t="t01n0">tabelas na base de dados</span></div><div><b>89</b><span data-t="t01n1">ecrãs</span></div><div><b>280+</b><span data-t="t01n2">testes automáticos</span></div></div><ul class="t-hl"><li data-th="t01h0"><b>Uma empresa por instalação:</b> nome, logótipo, cores e textos mudam-se na administração, sem tocar no código.</li><li data-th="t01h1"><b>Facturação completa:</b> notas de crédito, pagamentos por M‑Pesa ligados à factura e auditoria de cada ação.</li><li data-th="t01h2"><b>Qualidade:</b> testes automáticos, PHPStan, ESLint e verificação contínua no GitHub Actions.</li></ul></div></div>
+      <div class="t-head"><div class="t-title"><span class="num">01</span><h3 class="disp">nsERP</h3></div><div class="t-cols"><div class="t-intro"><p data-t="t01d">Sistema de gestão (ERP) para pequenas e médias empresas moçambicanas. Junta num só lugar o que antes estava em folhas de cálculo e cadernos: vendas, reservas, facturação, compras e stock.</p><p class="t-role" data-th="t01r"><b>Projeto de monografia</b>, testado na <b>LemServ</b> (empresa-piloto). Fiz tudo: análise, base de dados, API, interface e testes.</p><div class="t-meta"><span data-t="t01m0">Laravel 12</span><span data-t="t01m1">React 19 + TypeScript</span><span data-t="t01m2">Inertia · shadcn/ui</span><span data-t="t01m3">MariaDB</span><span data-t="t01m4">M‑Pesa</span></div></div><div class="t-facts"><div class="t-stats"><div><b>40</b><span data-t="t01n0">tabelas na base de dados</span></div><div><b>89</b><span data-t="t01n1">ecrãs</span></div><div><b>280+</b><span data-t="t01n2">testes automáticos</span></div></div><ul class="t-hl"><li data-th="t01h0"><b>Uma empresa por instalação:</b> nome, logótipo, cores e textos mudam-se na administração, sem tocar no código.</li><li data-th="t01h1"><b>Facturação completa:</b> notas de crédito, pagamentos por M‑Pesa ligados à factura e auditoria de cada ação.</li><li data-th="t01h2"><b>Qualidade:</b> testes automáticos, PHPStan, ESLint e verificação contínua no GitHub Actions.</li></ul></div></div></div>
       <div class="t-grid">
-        <ol class="steps"><li class="step on" data-img="media/nserp-clean.webp"><span class="n">01</span><div><h4 data-t="t01s0h">Visão geral</h4><p data-t="t01s0p">O painel mostra num relance o que está por vender, entregar, facturar e receber.</p></div></li><li class="step" data-img="media/g/nserp-produtos.webp"><span class="n">02</span><div><h4 data-t="t01s1h">Produtos e stock</h4><p data-t="t01s1p">Produtos com preços de venda e de aluguer, e as quantidades em armazém.</p></div></li><li class="step" data-img="media/g/nserp-reserva.webp"><span class="n">03</span><div><h4 data-t="t01s2h">Reservas e orçamentos</h4><p data-t="t01s2p">O sistema calcula IVA, dias e totais à medida que as linhas são adicionadas.</p></div></li><li class="step" data-img="media/g/nserp-mpesa.webp"><span class="n">04</span><div><h4 data-t="t01s3h">Pagamentos por M‑Pesa</h4><p data-t="t01s3p">Cada pagamento recebido fica ligado à factura, que fecha sozinha quando fica saldada.</p></div></li><li class="step" data-img="media/g/nserp-loja.webp"><span class="n">05</span><div><h4 data-t="t01s4h">Loja online</h4><p data-t="t01s4p">Os clientes fazem pedidos pelo site da empresa, ligado ao inventário em tempo real.</p></div></li></ol>
+        <ol class="steps"><li class="step on" data-img="media/nserp-clean.webp" tabindex="0"><span class="n">01</span><div><h4 data-t="t01s0h">Visão geral</h4><p data-t="t01s0p">O painel mostra num relance o que está por vender, entregar, facturar e receber.</p></div></li><li class="step" data-img="media/g/nserp-produtos.webp" tabindex="0"><span class="n">02</span><div><h4 data-t="t01s1h">Produtos e stock</h4><p data-t="t01s1p">Produtos com preços de venda e de aluguer, e as quantidades em armazém.</p></div></li><li class="step" data-img="media/g/nserp-reserva.webp" tabindex="0"><span class="n">03</span><div><h4 data-t="t01s2h">Reservas e orçamentos</h4><p data-t="t01s2p">O sistema calcula IVA, dias e totais à medida que as linhas são adicionadas.</p></div></li><li class="step" data-img="media/g/nserp-mpesa.webp" tabindex="0"><span class="n">04</span><div><h4 data-t="t01s3h">Pagamentos por M‑Pesa</h4><p data-t="t01s3p">Cada pagamento recebido fica ligado à factura, que fecha sozinha quando fica saldada.</p></div></li><li class="step" data-img="media/g/nserp-loja.webp" tabindex="0"><span class="n">05</span><div><h4 data-t="t01s4h">Loja online</h4><p data-t="t01s4p">Os clientes fazem pedidos pelo site da empresa, ligado ao inventário em tempo real.</p></div></li></ol>
         <div class="stage"><div class="dev"><div class="bar"><i></i><i></i><i></i><span>nsERP</span><span class="segs"><b></b><b></b><b></b><b></b><b></b></span></div><div class="screen"><img src="media/nserp-clean.webp" alt="Visão geral"></div><div class="dev-foot"><span></span><button class="vbtn" type="button" data-video="media/nserp-demo.mp4" data-title="nsERP"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7.5-4.5z"/></svg><span data-t="t01v">Vídeo · 37 s</span></button></div></div></div>
       </div>
     </article>
     <article class="tour" id="caso-edu">
-      <div class="t-head"><div class="t-title"><span class="num">02</span><h3 class="disp">EduFuturo</h3></div><div><p data-t="t02d">Plataforma de ensino online feita para Moçambique, com áreas para alunos, instrutores e administradores. Os alunos aprendem ao seu ritmo e os instrutores veem quem precisa de ajuda.</p><p class="t-role" data-th="t02r">Projeto pessoal, feito de ponta a ponta por mim: produto, base de dados, API, interface e testes.</p><div class="t-meta"><span data-t="t02m0">Laravel 12</span><span data-t="t02m1">React 19 + TypeScript</span><span data-t="t02m2">Inertia · Tailwind 4</span><span data-t="t02m3">PWA</span><span data-t="t02m4">IA · OpenAI</span></div><div class="t-stats"><div><b>4</b><span data-t="t02n0">línguas, incluindo changana e sena</span></div><div><b>32</b><span data-t="t02n1">ecrãs</span></div><div><b>90+</b><span data-t="t02n2">testes automáticos</span></div></div><ul class="t-hl"><li data-th="t02h0"><b>Pensado para pouca internet:</b> instala-se como aplicação (PWA), poupa dados e tem página própria sem ligação.</li><li data-th="t02h1"><b>Comunidade:</b> chat com chamadas de vídeo (Jitsi), mentorias e um assistente de estudo com IA.</li><li data-th="t02h2"><b>Para instrutores:</b> correções, avisos à turma e analítica com exportação para CSV.</li></ul></div></div>
+      <div class="t-head"><div class="t-title"><span class="num">02</span><h3 class="disp">EduFuturo</h3></div><div class="t-cols"><div class="t-intro"><p data-t="t02d">Plataforma de ensino online feita para Moçambique, com áreas para alunos, instrutores e administradores. Os alunos aprendem ao seu ritmo e os instrutores veem quem precisa de ajuda.</p><p class="t-role" data-th="t02r">Projeto pessoal, feito de ponta a ponta por mim: produto, base de dados, API, interface e testes.</p><div class="t-meta"><span data-t="t02m0">Laravel 12</span><span data-t="t02m1">React 19 + TypeScript</span><span data-t="t02m2">Inertia · Tailwind 4</span><span data-t="t02m3">PWA</span><span data-t="t02m4">IA · OpenAI</span></div></div><div class="t-facts"><div class="t-stats"><div><b>4</b><span data-t="t02n0">línguas, incluindo changana e sena</span></div><div><b>32</b><span data-t="t02n1">ecrãs</span></div><div><b>90+</b><span data-t="t02n2">testes automáticos</span></div></div><ul class="t-hl"><li data-th="t02h0"><b>Pensado para pouca internet:</b> instala-se como aplicação (PWA), poupa dados e tem página própria sem ligação.</li><li data-th="t02h1"><b>Comunidade:</b> chat com chamadas de vídeo (Jitsi), mentorias e um assistente de estudo com IA.</li><li data-th="t02h2"><b>Para instrutores:</b> correções, avisos à turma e analítica com exportação para CSV.</li></ul></div></div></div>
       <div class="t-grid">
-        <ol class="steps"><li class="step on" data-img="media/c/edu-8.webp"><span class="n">01</span><div><h4 data-t="t02s0h">Início do aluno</h4><p data-t="t02s0p">A aula em curso, a meta semanal, os pontos e os certificados num só ecrã.</p></div></li><li class="step" data-img="media/c/edu-17.webp"><span class="n">02</span><div><h4 data-t="t02s1h">Catálogo de cursos</h4><p data-t="t02s1p">Cursos por categoria, cada um com o progresso do aluno.</p></div></li><li class="step" data-img="media/c/edu-42.webp"><span class="n">03</span><div><h4 data-t="t02s2h">Painel do instrutor</h4><p data-t="t02s2p">Gestão de aulas, exercícios, alunos e avaliações.</p></div></li><li class="step" data-img="media/c/edu-50.webp"><span class="n">04</span><div><h4 data-t="t02s3h">Analítica da turma</h4><p data-t="t02s3p">Atividade de estudo, inscrições e conclusões, com exportação para CSV.</p></div></li></ol>
+        <ol class="steps"><li class="step on" data-img="media/c/edu-8.webp" tabindex="0"><span class="n">01</span><div><h4 data-t="t02s0h">Início do aluno</h4><p data-t="t02s0p">A aula em curso, a meta semanal, os pontos e os certificados num só ecrã.</p></div></li><li class="step" data-img="media/c/edu-17.webp" tabindex="0"><span class="n">02</span><div><h4 data-t="t02s1h">Catálogo de cursos</h4><p data-t="t02s1p">Cursos por categoria, cada um com o progresso do aluno.</p></div></li><li class="step" data-img="media/c/edu-42.webp" tabindex="0"><span class="n">03</span><div><h4 data-t="t02s2h">Painel do instrutor</h4><p data-t="t02s2p">Gestão de aulas, exercícios, alunos e avaliações.</p></div></li><li class="step" data-img="media/c/edu-50.webp" tabindex="0"><span class="n">04</span><div><h4 data-t="t02s3h">Analítica da turma</h4><p data-t="t02s3p">Atividade de estudo, inscrições e conclusões, com exportação para CSV.</p></div></li></ol>
         <div class="stage"><div class="dev"><div class="bar"><i></i><i></i><i></i><span>EduFuturo Digital</span><span class="segs"><b></b><b></b><b></b><b></b></span></div><div class="screen"><img src="media/c/edu-8.webp" alt="Início do aluno"></div><div class="dev-foot"><span></span><button class="vbtn" type="button" data-video="media/edufuturo-demo.mp4" data-title="EduFuturo Digital"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7.5-4.5z"/></svg><span data-t="t02v">Vídeo · 76 s</span></button></div></div></div>
       </div>
     </article>
@@ -536,12 +575,21 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
 <section class="path" id="percurso">
   <div class="wrap">
     <div class="sh"><h2 class="disp kin" data-th="pathT">Percur<span class="o">so</span></h2><span class="mono" data-t="pathS">Experiência e formação</span></div>
+    <div class="path-grid">
     <ol class="tl" id="tl">
       <span class="line" aria-hidden="true"><i id="tlline"></i></span>
       <li><span class="when" data-t="tl1w">ATUAL</span><h3 data-t="tl1h">Programador full-stack, independente</h3><p data-t="tl1p">Sistemas e aplicações à medida para empresas e escolas, do levantamento de requisitos à publicação.</p></li>
       <li><span class="when">2026</span><h3 data-t="tl2h">nsERP e EduFuturo Digital</h3><p data-t="tl2p">Concebi e desenvolvi os dois sistemas de ponta a ponta com Laravel, React e TypeScript. O nsERP é o meu projeto de monografia, testado na LemServ.</p></li>
       <li><span class="when" data-t="tl3w">EM CURSO · 4.º ANO</span><h3 data-t="tl3h">Licenciatura em Informática de Economia e Gestão</h3><p data-t="tl3p">Programação, bases de dados e sistemas de informação, a par de economia, contabilidade e gestão.</p></li>
     </ol>
+    <aside class="facts" aria-label="Em números">
+      <div class="fact"><b><span data-n="2">2</span></b><span data-t="f1">sistemas completos, feitos de ponta a ponta</span></div>
+      <div class="fact"><b><span data-n="370">370</span>+</b><span data-t="f2">testes automáticos nos dois projetos</span></div>
+      <div class="fact"><b><span data-n="121">121</span></b><span data-t="f3">ecrãs desenhados e programados</span></div>
+      <div class="fact"><b><span data-n="4">4</span></b><span data-t="f4">línguas no EduFuturo, com changana e sena</span></div>
+      <a class="cv-card" href="Nuryan-Sultane-CV.pdf" target="_blank" rel="noopener" download><div><b data-t="cvT">Ver o currículo</b><span data-t="cvS">1 página · atualizado em novembro de 2026</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6.5 11.5 12 17l5.5-5.5M5 20h14"/></svg></a>
+    </aside>
+    </div>
   </div>
 </section>
 
@@ -572,18 +620,20 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
       <button class="c-row copy" type="button" data-copy="sultanenuryan8@gmail.com"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="k">E-mail</span><span class="v">sultanenuryan8@gmail.com</span><span class="a" data-t="copy">Copiar</span></button>
       <button class="c-row copy" type="button" data-copy="+258875043136"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="k" data-t="phone">Telefone</span><span class="v">+258 87 504 3136</span><span class="a" data-t="copy">Copiar</span></button>
       <a class="c-row" href="https://wa.me/258875043136" target="_blank" rel="noopener"><svg class="fl" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span class="k">WhatsApp</span><span class="v" data-t="sendMsg">Enviar mensagem</span><span class="a" data-t="open">Abrir ↗</span></a>
-      <a class="c-row" href="https://github.com/NUNUDEV-55" target="_blank" rel="noopener"><svg class="fl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="k">GitHub</span><span class="v">NUNUDEV-55</span><span class="a" data-t="open">Abrir ↗</span></a>
+      <a class="c-row" href="https://github.com/nunuDev-55" target="_blank" rel="noopener"><svg class="fl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="k">GitHub</span><span class="v">nunuDev-55</span><span class="a" data-t="open">Abrir ↗</span></a>
+      <a class="c-row" href="https://www.linkedin.com/in/nuryan-sultane-01371044a" target="_blank" rel="noopener"><svg class="fl" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="k">LinkedIn</span><span class="v">Nuryan Sultane</span><span class="a" data-t="open">Abrir ↗</span></a>
+      <a class="c-row" data-cv href="Nuryan-Sultane-CV.pdf" target="_blank" rel="noopener" download><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span class="k" data-t="b2">Currículo</span><span class="v" data-t="cvT">Ver o currículo</span><span class="a" data-t="open">Abrir ↗</span></a>
     </div>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Nuryan Sultane</span><a data-t-cv href="Nuryan-Sultane-CV.pdf" target="_blank" rel="noopener" download><span data-t="b2">Currículo</span> ↗</a><button class="totop" type="button" id="cmdFoot"><span data-t="cmdHint">Atalhos</span> · <span id="cmdKey">Ctrl K</span></button><a class="totop" href="#inicio"><span data-t="top">Voltar ao topo</span> ↑</a></div></footer>
+<footer><div class="wrap"><span>© 2026 Nuryan Sultane</span><a data-t-cv href="Nuryan-Sultane-CV.pdf" target="_blank" rel="noopener" download><span data-t="b2">Currículo</span> ↗</a><a href="https://www.linkedin.com/in/nuryan-sultane-01371044a" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/nunuDev-55" target="_blank" rel="noopener">GitHub ↗</a><button class="totop" type="button" id="cmdFoot"><span data-t="cmdHint">Atalhos</span> · <span id="cmdKey">Ctrl K</span></button><a class="totop" href="#inicio"><span data-t="top">Voltar ao topo</span> ↑</a></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <a class="fab" id="fab" href="#inicio" aria-label="Voltar ao topo"><svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle id="fabRing" cx="26" cy="26" r="24" stroke-dasharray="150.8" stroke-dashoffset="150.8"/></svg><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
 <dialog id="cmd" aria-label="Comandos">
   <div class="cmd-in"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="cmdIn" type="text" autocomplete="off" spellcheck="false" data-tp="cmdP" placeholder="Escreva um comando ou procure…" aria-label="Procurar comandos"></div>
-  <ul class="cmd-list" id="cmdList" role="listbox"></ul>
+  <ul class="cmd-list" id="cmdList" role="listbox" tabindex="-1" autofocus></ul>
   <div class="cmd-foot"><span data-t="k1">↑↓ navegar</span><span data-t="k2">Enter abrir</span><span data-t="k3">Esc fechar</span></div>
 </dialog>
 
@@ -609,6 +659,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
   let lenis=null,gsapReady=false;
   const I={pt:{
     nsD:'Sistema de gestão para escolas e faculdades, da mesma família do nsERP. Está em desenvolvimento e vai aparecer aqui com capturas assim que a primeira versão estiver pronta.',nsM0:'Em desenvolvimento',nsM1:'Gestão escolar',nsL:'Acompanhar no GitHub',nsBadge:'Em construção',stNote:'Nos projetos: Laravel 12, React 19, TypeScript, Inertia e MariaDB.',
+    skip:'Saltar para os projetos',f1:'sistemas completos, feitos de ponta a ponta',f2:'testes automáticos nos dois projetos',f3:'ecrãs desenhados e programados',f4:'línguas no EduFuturo, com changana e sena',cvT:'Ver o currículo',cvS:'1 página · atualizado em novembro de 2026',
     ld:'Portfólio · 2026',n1:'Projetos',n3:'Percurso',n4:'Contacto',h1:'Programador full-stack em Moçambique. Construo',h2:'para empresas e escolas.',avail:'Disponível',mz:'Moçambique',
     b1:'Ver projetos',b2:'Currículo',scroll:'Role',about:'(Sobre)',projT:'Proje<span class="o">tos</span>',drag:'Arraste a esfera',g1:'Linguagens',g2:'Frameworks e bibliotecas',g3:'Dados, ferramentas e integrações',
     pathT:'Percur<span class="o">so</span>',pathS:'Experiência e formação',tl1w:'ATUAL',tl1h:'Programador full-stack, independente',tl1p:'Sistemas e aplicações à medida para empresas e escolas, do levantamento de requisitos à publicação.',
@@ -617,13 +668,14 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
     fN:'O seu nome',fM:'O que precisa?',fH:'A mensagem abre no WhatsApp já escrita. Só precisa de carregar em enviar.',fB:'Enviar pelo WhatsApp',phone:'Telefone',sendMsg:'Enviar mensagem',open:'Abrir ↗',copy:'Copiar',
     cmdHint:'Atalhos',top:'Voltar ao topo',cmdP:'Escreva um comando ou procure…',k1:'↑↓ navegar',k2:'Enter abrir',k3:'Esc fechar',close:'Fechar',cmdA:'Abrir comandos',themeA:'Mudar tema',
     emailC:'E-mail copiado',phoneC:'Número copiado',copied:'Copiado ✓',themeL:'Modo claro',themeD:'Modo escuro',langT:'Switch to English',empty:'Nenhum comando encontrado',
-    c1:'Ir para Projetos',c2:'Ir para Stack',c3:'Ir para Percurso',c4:'Ir para Contacto',c5:'Ver vídeo do nsERP',c6:'Ver vídeo do EduFuturo',c7:'Copiar e-mail',c8:'Abrir WhatsApp',c9:'Abrir GitHub',c10:'Abrir currículo',
+    c1:'Ir para Projetos',c2:'Ir para Stack',c3:'Ir para Percurso',c4:'Ir para Contacto',c5:'Ver vídeo do nsERP',c6:'Ver vídeo do EduFuturo',c7:'Copiar e-mail',c8:'Abrir WhatsApp',c9:'Abrir GitHub',c11:'Abrir LinkedIn',c10:'Abrir currículo',
     words:['sistemas de gestão','aplicações web','plataformas de ensino','APIs e integrações','lojas online'],
     st:'Estudo Informática de Economia e <strong>Gestão</strong> e passo os dias a transformar processos de negócio em software. Vendas, facturas, stock, aulas online: sistemas que as pessoas usam <strong>todos os dias.</strong>',abSub:'Feitos da base de dados à interface, com atenção a quem os usa.',
     tyP:{ty1:'um sistema de gestão',ty2:'um site ou loja online',ty3:'uma aplicação web',ty4:'uma vaga de emprego para si',ty5:'um projeto'},
     msg:(n,t,m)=>`Olá Nuryan!${n?` Sou ${n}.`:''} Gostava de falar sobre ${t}.${m?`\n\n${m}`:''}`
   },en:{
     nsD:'A management system for schools and universities, from the same family as nsERP. It is in development and will show up here with screenshots as soon as the first version is ready.',nsM0:'In development',nsM1:'School management',nsL:'Follow on GitHub',nsBadge:'Under construction',stNote:'In my projects: Laravel 12, React 19, TypeScript, Inertia and MariaDB.',
+    skip:'Skip to projects',f1:'complete systems, built end to end',f2:'automated tests across both projects',f3:'screens designed and coded',f4:'languages in EduFuturo, with Changana and Sena',cvT:'See my résumé',cvS:'1 page · updated November 2026',
     ld:'Portfolio · 2026',n1:'Projects',n3:'Journey',n4:'Contact',h1:'Full-stack developer in Mozambique. I build',h2:'for companies and schools.',avail:'Available',mz:'Mozambique',
     b1:'See projects',b2:'Résumé',scroll:'Scroll',about:'(About)',projT:'Pro<span class="o">jects</span>',drag:'Drag the sphere',g1:'Languages',g2:'Frameworks and libraries',g3:'Data, tools and integrations',
     pathT:'Jour<span class="o">ney</span>',pathS:'Experience and education',tl1w:'NOW',tl1h:'Full-stack developer, freelance',tl1p:'Custom systems and applications for companies and schools, from requirements to launch.',
@@ -632,7 +684,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
     fN:'Your name',fM:'What do you need?',fH:'The message opens in WhatsApp already written. Just press send.',fB:'Send via WhatsApp',phone:'Phone',sendMsg:'Send a message',open:'Open ↗',copy:'Copy',
     cmdHint:'Shortcuts',top:'Back to top',cmdP:'Type a command or search…',k1:'↑↓ navigate',k2:'Enter select',k3:'Esc close',close:'Close',cmdA:'Open commands',themeA:'Change theme',
     emailC:'Email copied',phoneC:'Number copied',copied:'Copied ✓',themeL:'Light mode',themeD:'Dark mode',langT:'Mudar para português',empty:'No commands found',
-    c1:'Go to Projects',c2:'Go to Stack',c3:'Go to Journey',c4:'Go to Contact',c5:'Watch nsERP video',c6:'Watch EduFuturo video',c7:'Copy email',c8:'Open WhatsApp',c9:'Open GitHub',c10:'Open résumé',
+    c1:'Go to Projects',c2:'Go to Stack',c3:'Go to Journey',c4:'Go to Contact',c5:'Watch nsERP video',c6:'Watch EduFuturo video',c7:'Copy email',c8:'Open WhatsApp',c9:'Open GitHub',c11:'Open LinkedIn',c10:'Open résumé',
     words:['management systems','web applications','learning platforms','APIs and integrations','online stores'],
     st:'I study Computer Science for Economics and <strong>Management</strong> and spend my days turning business processes into software. Sales, invoices, stock, online classes: systems people use <strong>every day.</strong>',abSub:'Built from the database to the interface, with the people who use them in mind.',
     tyP:{ty1:'a management system',ty2:'a website or online store',ty3:'a web application',ty4:'a job opportunity for you',ty5:'a project'},
@@ -689,7 +741,7 @@ dialog video{width:100%;max-height:calc(100dvh - 110px);border-radius:10px;backg
       else{while(scr.children.length>1)scr.removeChild(scr.firstChild);}
     };
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)go(steps.indexOf(e.target));}),{rootMargin:'-45% 0px -45% 0px'});
-    steps.forEach((s,i)=>{io.observe(s);s.addEventListener('click',()=>go(i));});
+    steps.forEach((s,i)=>{io.observe(s);s.addEventListener('click',()=>go(i));s.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go(i);}});});
   });
 
   /* hero shader */
@@ -801,6 +853,14 @@ void main(){
     rails.forEach(r=>{const half=r.el.scrollWidth/2;r.x+=(.6+vel*.35)*r.dir*flip;if(r.x<-half)r.x+=half;if(r.x>0)r.x-=half;r.el.style.transform=`translate3d(${r.x}px,0,0)`;});requestAnimationFrame(loop);})();
 
   /* progress bar */
+  const navEl=document.querySelector('.nav'),navLinks=[...document.querySelectorAll('.nav nav a')],navInd=document.getElementById('navInd');
+  let navCur=null;
+  function navMark(){const a=navLinks.find(l=>l.getAttribute('href')==='#'+navCur);navLinks.forEach(l=>l.classList.toggle('on',l===a));
+    if(a&&a.offsetWidth){navInd.style.left=a.offsetLeft+'px';navInd.style.width=a.offsetWidth+'px';navInd.style.opacity=1;}else navInd.style.opacity=0;}
+  {const ids=['projetos','stack','percurso','contacto'],seen={};
+    const io=new IntersectionObserver(es=>{es.forEach(e=>seen[e.target.id]=e.isIntersecting);navCur=ids.slice().reverse().find(i=>seen[i])||null;navMark();},{rootMargin:'-35% 0px -60% 0px'});
+    ids.forEach(i=>{const el=document.getElementById(i);if(el)io.observe(el);});addEventListener('resize',navMark);}
+  const onNavScroll=()=>navEl.classList.toggle('scrolled',scrollY>24);addEventListener('scroll',onNavScroll,{passive:true});onNavScroll();
   const pbar=document.getElementById('pbar');
   addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;pbar.style.transform=`scaleX(${h>0?scrollY/h:0})`;},{passive:true});
 
@@ -840,7 +900,7 @@ void main(){
     document.querySelectorAll('[data-ta]').forEach(el=>{const v=L()[el.dataset.ta];if(v!=null)el.setAttribute('aria-label',v);});
     langBtn.textContent=lang==='pt'?'EN':'PT';langBtn.setAttribute('aria-label',L().langT);
     setStatement();setCTA();wi=0;scrGen++;scr.textContent=WORDS()[0];tick();updateMsg();
-    document.querySelectorAll('.tour').forEach(t=>t._ui&&t._ui());
+    document.querySelectorAll('.tour').forEach(t=>t._ui&&t._ui());navMark();
   }
   const toggleLang=()=>{lang=lang==='pt'?'en':'pt';store.set('ns-lang',lang);applyLang();toast(lang==='pt'?'Português':'English');};
   langBtn.addEventListener('click',toggleLang);
@@ -852,20 +912,20 @@ void main(){
   /* ---------- command palette (Ctrl/⌘ + K) ---------- */
   const cmd=document.getElementById('cmd'),cIn=document.getElementById('cmdIn'),cList=document.getElementById('cmdList'),cmdBtn=document.getElementById('cmdBtn');
   const mac=/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent);
-  cmdBtn.textContent=fine?(mac?'⌘K':'Ctrl K'):'Menu';document.getElementById('cmdKey').textContent=mac?'⌘K':'Ctrl K';
+  if(fine)cmdBtn.textContent=mac?'⌘K':'Ctrl K';else{cmdBtn.classList.add('menu');cmdBtn.innerHTML='Menu<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 5.5h12M2 10.5h12"/></svg>';}document.getElementById('cmdKey').textContent=mac?'⌘K':'Ctrl K';
   const goTo=sel=>{const t=document.querySelector(sel);if(!t)return;if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:reduce?'auto':'smooth'});};
   const clickEl=sel=>{const el=document.querySelector(sel);if(el)el.click();};
   const cmds=()=>[
     {i:'↓',l:L().c1,r:()=>goTo('#projetos')},{i:'◎',l:L().c2,r:()=>goTo('#stack')},{i:'↗',l:L().c3,r:()=>goTo('#percurso')},{i:'✉',l:L().c4,r:()=>goTo('#contacto')},
     {i:'▶',l:L().c5,r:()=>clickEl('#caso-nserp .vbtn')},{i:'▶',l:L().c6,r:()=>clickEl('#caso-edu .vbtn')},
     {i:'⧉',l:L().c7,r:()=>copyText('sultanenuryan8@gmail.com',L().emailC)},{i:'✆',l:L().c8,r:()=>clickEl('.c-row[href*="wa.me"]')},
-    {i:'⌥',l:L().c9,r:()=>clickEl('.c-row[href*="github"]')},{i:'⇩',l:L().c10,r:()=>clickEl('footer a[data-t-cv]')},
+    {i:'⌥',l:L().c9,r:()=>clickEl('.c-row[href*="github"]')},{i:'in',l:L().c11,r:()=>clickEl('.c-row[href*="linkedin"]')},{i:'⇩',l:L().c10,r:()=>clickEl('footer a[data-t-cv]')},
     {i:isLight()?'☾':'☀',l:isLight()?L().themeD:L().themeL,r:toggleTheme},{i:'⇄',l:L().langT,r:toggleLang}];
   let cSel=0,cItems=[];
   const norm=t=>t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
   function renderCmd(){const q=norm(cIn.value||'');cItems=cmds().filter(c=>!q||norm(c.l).includes(q));cSel=Math.min(cSel,Math.max(0,cItems.length-1));
     cList.innerHTML=cItems.length?cItems.map((c,k)=>`<li role="option" data-k="${k}" class="${k===cSel?'on':''}" aria-selected="${k===cSel}"><span class="ic">${c.i}</span>${c.l}${k===cSel?'<small>↵</small>':''}</li>`).join(''):`<li class="cmd-empty">${L().empty}</li>`;}
-  const openCmd=()=>{cIn.value='';cSel=0;renderCmd();if(cmd.showModal){if(!cmd.open)cmd.showModal();}else cmd.setAttribute('open','');setTimeout(()=>cIn.focus(),30);};
+  const openCmd=()=>{cIn.value='';cSel=0;renderCmd();if(cmd.showModal){if(!cmd.open)cmd.showModal();}else cmd.setAttribute('open','');if(fine)setTimeout(()=>cIn.focus(),30);};
   const closeCmd=()=>{if(cmd.close)cmd.close();else cmd.removeAttribute('open');};
   const runCmd=k=>{const c=cItems[k];if(!c)return;closeCmd();setTimeout(c.r,60);};
   cmdBtn.addEventListener('click',openCmd);document.getElementById('cmdFoot').addEventListener('click',openCmd);
@@ -896,9 +956,9 @@ void main(){
   if(root.classList.contains('loading')){
     const o={v:0},n=document.getElementById('ldn'),b=document.getElementById('ldb');
     gsap.timeline()
-      .to(o,{v:100,duration:1.5,ease:'power2.inOut',onUpdate:()=>{n.textContent=String(Math.round(o.v)).padStart(3,'0');b.style.transform=`scaleX(${o.v/100})`;}})
-      .to('#ldc',{yPercent:-101,duration:.7,ease:'expo.inOut'})
-      .to('#loader',{clipPath:'inset(0 0 100% 0)',duration:.9,ease:'expo.inOut',onStart:intro,onComplete:()=>{root.classList.remove('loading');}},'-=.2');
+      .to(o,{v:100,duration:.9,ease:'power2.inOut',onUpdate:()=>{n.textContent=String(Math.round(o.v)).padStart(3,'0');b.style.transform=`scaleX(${o.v/100})`;}})
+      .to('#ldc',{yPercent:-101,duration:.5,ease:'expo.inOut'})
+      .to('#loader',{clipPath:'inset(0 0 100% 0)',duration:.7,ease:'expo.inOut',onStart:intro,onComplete:()=>{root.classList.remove('loading');}},'-=.2');
   } else intro();
 
   /* hero parts drift on scroll */
@@ -933,15 +993,17 @@ void main(){
   gsap.from('.soon',{y:60,opacity:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:'.soon',start:'top 88%'}});
   /* stack */
   gsap.from('#sphere',{scale:.4,rotate:-40,opacity:0,duration:1.8,ease:'expo.out',scrollTrigger:{trigger:'#sphere',start:'top 85%'}});
-  ScrollTrigger.batch('.tg',{start:'top 92%',onEnter:b=>gsap.from(b,{y:24,opacity:0,scale:.9,duration:.8,ease:'back.out(1.7)',stagger:.05})});
+  ScrollTrigger.batch('.tg',{start:'top 92%',once:true,onEnter:b=>gsap.fromTo(b,{y:24,opacity:0,scale:.9},{y:0,opacity:1,scale:1,duration:.8,ease:'back.out(1.7)',stagger:.05,overwrite:true,clearProps:'transform,opacity'})});
 
   /* timeline draws */
   gsap.fromTo('#tlline',{scaleY:0},{scaleY:1,ease:'none',scrollTrigger:{trigger:'#tl',start:'top 75%',end:'bottom 60%',scrub:true}});
+  document.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n,o={v:0};gsap.to(o,{v:n,duration:1.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 94%'},onUpdate:()=>el.textContent=Math.round(o.v)});});
+  ScrollTrigger.batch('.fact,.cv-card',{start:'top 94%',once:true,onEnter:b=>gsap.fromTo(b,{y:28,opacity:0},{y:0,opacity:1,duration:.9,ease:'expo.out',stagger:.07,overwrite:true,clearProps:'transform,opacity'})});
   gsap.utils.toArray('.tl li').forEach(li=>gsap.from(li,{x:-30,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:li,start:'top 85%'}}));
 
   /* contact */
   gsap.from('#cta .ch',{yPercent:120,rotate:6,duration:1.3,ease:'expo.out',stagger:.04,scrollTrigger:{trigger:'#cta',start:'top 85%'}});
-  ScrollTrigger.batch('.c-row',{start:'top 95%',onEnter:b=>gsap.from(b,{y:30,opacity:0,duration:.9,ease:'expo.out',stagger:.08})});
+  ScrollTrigger.batch('.c-row',{start:'top 95%',once:true,onEnter:b=>gsap.fromTo(b,{y:30,opacity:0},{y:0,opacity:1,duration:.9,ease:'expo.out',stagger:.08,overwrite:true,clearProps:'transform,opacity'})});
   addEventListener('load',()=>ScrollTrigger.refresh());
 })();
 </script>
