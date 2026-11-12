@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **Nuryan Sultane**, programador full-stack em Moçambique.
 
-**Site:** https://nunudev-55.github.io
+**Site:** https://nuryansultane.github.io/
 
 ## Projetos em destaque
 
@@ -30,5 +30,5 @@ Site estático: não precisa de build nem de servidor. Basta abrir o `index.html
 
 - E-mail: sultanenuryan8@gmail.com
 - WhatsApp: +258 87 504 3136
-- GitHub: [nunuDev-55](https://github.com/nunuDev-55)
+- GitHub: [nuryansultane](https://github.com/nuryansultane)
 - LinkedIn: [Nuryan Sultane](https://www.linkedin.com/in/nuryan-sultane-01371044a)
